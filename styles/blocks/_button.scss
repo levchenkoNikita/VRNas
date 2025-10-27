@@ -1,0 +1,41 @@
+@use '../helper' as *;
+
+.button {
+    min-width: 140px;
+    height: var(--button-height);
+    border: 1px solid;
+    border-image: var(--gradient-blue-pink) 1;
+    background-image: var(--gradient-blue-pink);
+
+    &--transparent {
+        position: relative;
+        background-image: none;
+        background-color: transparent;
+
+        &::before {
+            @include abs-center;
+            content: '';
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            border: none;
+            background-image: var(--gradient-blue-pink);
+            transition-duration: var(--transition-duration);
+        }
+
+        & span {
+            position: relative;
+            z-index: 2;
+        }
+
+        @include hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    @include hover {
+        opacity: 1; // временно
+    }
+}

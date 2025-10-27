@@ -1,0 +1,49 @@
+@use './helper' as *;
+
+body {
+    font-family: var(--font-family);
+    color: #D1D1D1;
+    font-size: 16px;
+    font-weight: 300;
+    background-color: #18181B;
+
+    @include flex-center(); // временно
+}
+
+a, 
+button {
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+}
+
+h1 {
+    color: red;
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+h2 {
+    color: #fff;
+    font-family: var(--font-family);
+    font-weight: 600;
+
+    @include fluid-text(32, 48);
+}
+
+h3 {
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+h4 {
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: 400;
+}

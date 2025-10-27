@@ -1,0 +1,23 @@
+@mixin fluid-text($min, $max) {
+    font-size: clamp($min, calc($max / 1920 * 100)vw, $max);
+}
+
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+@mixin flex-center($inline-flex: false) {
+    @if($inline-flex) {
+        display: inline-flex;
+    }
+
+    @else {
+        display: flex;
+    }
+
+    align-items: center;
+    justify-content: center;
+}

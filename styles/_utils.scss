@@ -1,0 +1,44 @@
+@use './helper' as *;
+
+.container {
+    width: calc(var(--container) + var(--container-padding-x) * 2);
+    padding-inline: var(--container-padding-x);
+    margin-inline: auto;
+}
+
+.body2-text {
+    color: #B0B0B2;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.body3-text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.hidden-mobile {
+    @include mobile {
+        display: none !important;
+    }
+}
+
+.visible-mobile {
+    @include mobile-above {
+        display: none !important;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
