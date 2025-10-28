@@ -1,0 +1,78 @@
+@use '../helper' as *; // через абсолютный путь не работает, не знаю почему
+
+.header {
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 31px;
+    }
+
+    &__menu {
+        color: #fff
+    }
+
+    &__list {
+        @include flex-center;
+        column-gap: 64px;
+    }
+
+    &__link {
+        height: 52px;
+
+        &-select {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 4px;
+        }
+
+        & span {
+            @include flex-center();
+        }
+
+        &-arrow {
+            margin-top: 4px; // Для того, чтобы сместить arrow ниже центра ссылки
+            rotate: 0deg;
+            transition-duration: var(--transition-duration);
+        }
+
+        &-list {
+            --selectPadding: 15px;
+
+            position: absolute;
+            top: 100%;
+            left: calc(0px - var(--selectPadding));
+            width: 200px;
+            padding: var(--selectPadding);
+            border: 1px solid;
+            border-image: var(--gradient-white) 1;
+            display: none;
+            flex-direction: column;
+            row-gap: var(--selectPadding);
+            background-color: #252532;
+        }
+
+        &.is-active {
+            .header__link-list {
+                display: flex;
+            }
+        }
+
+        @include hover {
+            color: #D1D1D1;
+        }
+    }
+
+    &__link.is-hover {
+        font-weight: 500;
+    }
+
+    &__button {
+        font-size: 16px;
+        font-weight: 300;
+        height: 52px;
+        padding: 12px 24px;
+    }
+}

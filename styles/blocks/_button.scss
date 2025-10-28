@@ -1,16 +1,21 @@
-@use '../helper' as *;
+@use '../helper' as *; // через абсолютный путь не работает, не знаю почему
 
 .button {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
     min-width: 140px;
     height: var(--button-height);
+    padding: 18px 38px;
     border: 1px solid;
     border-image: var(--gradient-blue-pink) 1;
+    background-color: transparent;
     background-image: var(--gradient-blue-pink);
+    transition-duration: var(--transition-duration);
 
     &--transparent {
-        position: relative;
         background-image: none;
-        background-color: transparent;
 
         &::before {
             @include abs-center;
@@ -18,7 +23,6 @@
             width: 100%;
             height: 100%;
             opacity: 0;
-            border: none;
             background-image: var(--gradient-blue-pink);
             transition-duration: var(--transition-duration);
         }
@@ -35,7 +39,26 @@
         }
     }
 
-    @include hover {
-        opacity: 1; // временно
+    &--fill {
+        &::before {
+            @include abs-center;
+            content: '';
+            width: 100%;
+            height: 100%;
+            filter: blur(0px);
+            background-image: var(--gradient-blue-pink);
+            transition-duration: var(--transition-duration);
+        }
+
+        & span {
+            position: relative;
+            z-index: 2;
+        }
+
+        @include hover {
+            &::before {
+                filter: blur(20px);
+            }
+        }
     }
 }
