@@ -301,6 +301,7 @@ button {
   padding: 0;
   border: none;
   text-decoration: none;
+  background-color: transparent;
 }
 
 h1 {
@@ -424,24 +425,66 @@ h4 {
 .header__link {
   height: 52px;
 }
-.header__link-select {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 4px;
-}
 .header__link span {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.header__link-arrow {
+@media (hover: hover) {
+  .header__link-text:hover {
+    color: #D1D1D1;
+  }
+}
+@media (hover: none) {
+  .header__link-text:active {
+    color: #D1D1D1;
+  }
+}
+.header__link.is-current {
+  font-weight: 500;
+  cursor: default;
+  pointer-events: none;
+}
+.header__button {
+  font-size: 16px;
+  font-weight: 300;
+  height: 52px;
+  padding: 12px 24px;
+}
+
+.select-link {
+  position: relative;
+}
+.select-link__button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 4px;
+}
+.select-link__button-arrow {
   margin-top: 4px;
   rotate: 0deg;
   transition-duration: var(--transition-duration);
 }
-.header__link-list {
+.select-link__button.is-active {
+  color: #D1D1D1;
+}
+.select-link__button.is-active span:nth-child(2) {
+  rotate: 180deg;
+}
+@media (hover: hover) {
+  .select-link__button:hover {
+    color: #D1D1D1;
+  }
+}
+@media (hover: none) {
+  .select-link__button:active {
+    color: #D1D1D1;
+  }
+}
+.select-link__list {
   --selectPadding: 15px;
   position: absolute;
   top: 100%;
@@ -454,28 +497,20 @@ h4 {
   flex-direction: column;
   row-gap: var(--selectPadding);
   background-color: #252532;
+  transition-duration: var(--transition-duration);
 }
-.header__link.is-active .header__link-list {
+.select-link__list.is-active {
   display: flex;
 }
 @media (hover: hover) {
-  .header__link:hover {
+  .select-link__option:hover {
     color: #D1D1D1;
   }
 }
 @media (hover: none) {
-  .header__link:active {
+  .select-link__option:active {
     color: #D1D1D1;
   }
-}
-.header__link.is-hover {
-  font-weight: 500;
-}
-.header__button {
-  font-size: 16px;
-  font-weight: 300;
-  height: 52px;
-  padding: 12px 24px;
 }
 
 /*# sourceMappingURL=main.css.map */

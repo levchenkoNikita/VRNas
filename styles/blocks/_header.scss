@@ -20,53 +20,21 @@
     &__link {
         height: 52px;
 
-        &-select {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            column-gap: 4px;
-        }
-
         & span {
             @include flex-center();
         }
 
-        &-arrow {
-            margin-top: 4px; // Для того, чтобы сместить arrow ниже центра ссылки
-            rotate: 0deg;
-            transition-duration: var(--transition-duration);
-        }
-
-        &-list {
-            --selectPadding: 15px;
-
-            position: absolute;
-            top: 100%;
-            left: calc(0px - var(--selectPadding));
-            width: 200px;
-            padding: var(--selectPadding);
-            border: 1px solid;
-            border-image: var(--gradient-white) 1;
-            display: none;
-            flex-direction: column;
-            row-gap: var(--selectPadding);
-            background-color: #252532;
-        }
-
-        &.is-active {
-            .header__link-list {
-                display: flex;
+        &-text {
+            @include hover {
+                color: #D1D1D1;
             }
-        }
-
-        @include hover {
-            color: #D1D1D1;
         }
     }
 
-    &__link.is-hover {
+    &__link.is-current {
         font-weight: 500;
+        cursor: default;
+        pointer-events: none;
     }
 
     &__button {
