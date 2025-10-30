@@ -1,7 +1,7 @@
 @use './helper' as *;
 
 .container {
-    width: calc(var(--container) + var(--container-padding-x) * 2);
+    max-width: calc(var(--container) + var(--container-padding-x) * 2);
     padding-inline: var(--container-padding-x);
     margin-inline: auto;
 }
@@ -21,11 +21,24 @@
 .hidden-mobile {
     @include mobile {
         display: none !important;
+        background-color: red;
     }
 }
 
 .visible-mobile {
     @include mobile-above {
+        display: none !important;
+    }
+}
+
+.hidden-mobile-s {
+    @include mobile-s {
+        display: none !important;
+    }
+}
+
+.visible-mobile-s {
+    @include mobile-s-above {
         display: none !important;
     }
 }

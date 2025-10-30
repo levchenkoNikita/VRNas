@@ -47,7 +47,7 @@
         transition-duration: var(--transition-duration);
 
         &.is-active {
-            display: flex;
+            display: flex; // Надо разобраться с плавностью появления
         }
     }
 

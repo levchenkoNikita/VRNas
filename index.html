@@ -17,7 +17,7 @@
                     height="30">
             </a>
             <!-- Меню -->
-            <nav class="header__menu" data-js-header-menu>
+            <nav class="header__menu hidden-mobile" data-js-header-menu>
                 <ul class="header__list">
                     <li class="header__item">
                         <a href="#" class="header__link is-current">
@@ -76,7 +76,7 @@
                     <li class="header__item">
                         <div class="header__link select-link" data-js-header-select>
                             <button class="select-link__button" data-js-header-select-button>
-                                <span class="select-link__button-text">Page</span>
+                                <span class="select-link__button-text">Blog</span>
                                 <span class="select-link__button-arrow">
                                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -90,22 +90,17 @@
                             <ul class="select-link__list" data-js-header-select-list>
                                 <li class="select-link__item">
                                     <a href="#" class="select-link__option">
-                                        <span class="select-link__option-text">Pricing Plan</span>
+                                        <span class="select-link__option-text">Resent articles</span>
                                     </a>
                                 </li>
                                 <li class="select-link__item">
                                     <a href="#" class="select-link__option">
-                                        <span class="select-link__option-text">FAQ</span>
+                                        <span class="select-link__option-text">Our Team</span>
                                     </a>
                                 </li>
                                 <li class="select-link__item">
                                     <a href="#" class="select-link__option">
-                                        <span class="select-link__option-text">Tems & Conditions</span>
-                                    </a>
-                                </li>
-                                <li class="select-link__item">
-                                    <a href="#" class="select-link__option">
-                                        <span class="select-link__option-text">Privacy Policy</span>
+                                        <span class="select-link__option-text">Detail Service</span>
                                     </a>
                                 </li>
                             </ul>
@@ -113,10 +108,16 @@
                     </li>
                 </ul>
             </nav>
-            <!-- Кнопка -->
-            <button class="header__button button button--transparent">
-                <span class="header__button-text">Contact Us</span>
-            </button>
+            <!-- КнопкИ -->
+            <div class="header__button-wrapper">
+                <button class="header__button button button--transparent hidden-mobile-s">
+                    <span class="header__button-text">Contact Us</span>
+                </button>
+                <button class="header__burger-button burger-button visible-mobile" title="menu" data-js-header-burger-button>
+                    <span class="burger-button__text visually-hidden">Menu</span>
+                    <span class="burger-button__line"></span>
+                </button>
+            </div>
         </div>
     </header>
 

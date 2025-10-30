@@ -1,0 +1,68 @@
+@use '../helper' as *;
+
+.burger-button {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 52px;
+    height: var(--button-height-alt);
+    padding: 13px;
+    border: 1px solid;
+    border-image: var(--gradient-blue-pink) 1;
+    background-color: transparent;
+
+    &__line {
+        display: block;
+        width: 13px;
+        height: 2px;
+        background-color: white;
+        transition-duration: var(--transition-duration);
+        pointer-events: none;
+
+        &::before {
+            content: '';
+            position: relative;
+            top: -6px;
+            left: -7px;
+            width: 20px;
+            height: 2px;
+            rotate: 0;
+            display: block;
+            pointer-events: none;
+            background-color: white;
+            transition-duration: var(--transition-duration);
+        }
+
+        &::after {
+            content: '';
+            position: relative;
+            top: 4px;
+            left: 6px;
+            width: 7px;
+            height: 2px;
+            display: block;
+            rotate: 0;
+            pointer-events: none;
+            background-color: white;
+            transition-duration: var(--transition-duration);
+        }
+    }
+
+    &.is-active {
+        & .burger-button__line {
+            width: 0;
+        }
+
+        & .burger-button__line::before {
+            width: 25px;
+            rotate: -45deg;
+            translate: -17px 7px;
+        }
+
+        & .burger-button__line::after {
+            width: 25px;
+            rotate: 45deg;
+            translate: -30px -5px;
+        }
+    }
+}

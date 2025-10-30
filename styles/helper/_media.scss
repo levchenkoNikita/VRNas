@@ -1,13 +1,13 @@
-$desktop: 1920;
-$desktop-above: 1920.1; 
-$laptop: 1440;
-$laptop-above: 1440.1;
-$tablet: 1024;
-$tablet-above: 1024.1;
-$mobile: 767;
-$mobile-above: 767.1;
-$mobile-s: 480;
-$mobile-s-above: 480.1;
+$desktop: 1920px;
+$desktop-above: 1920.1px; 
+$laptop: 1440px;
+$laptop-above: 1440.1px;
+$tablet: 1024px;
+$tablet-above: 1024.1px;
+$mobile: 767px;
+$mobile-above: 767.1px;
+$mobile-s: 480px;
+$mobile-s-above: 480.1px;
 
 @mixin desktop {
     @media (max-width: $desktop) {
