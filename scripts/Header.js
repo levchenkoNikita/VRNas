@@ -13,6 +13,7 @@ class Header {
     }
 
     constructor() {
+        this.menuElement = document.querySelector(this.selectors.menu);
         this.currentSelect = [];
         this.bindEvents();
     }
@@ -54,6 +55,7 @@ class Header {
 
     handleBurgerButton(clickElement) {
         clickElement.classList.toggle("is-active");
+        this.menuElement.classList.toggle("is-active");
     }
 
     bindEvents() {

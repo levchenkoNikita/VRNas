@@ -16,7 +16,7 @@
         width: 13px;
         height: 2px;
         background-color: white;
-        transition-duration: var(--transition-duration);
+        transition-duration: var(--transition-duration-alt);
         pointer-events: none;
 
         &::before {
@@ -30,7 +30,7 @@
             display: block;
             pointer-events: none;
             background-color: white;
-            transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration-alt);
         }
 
         &::after {
@@ -44,7 +44,7 @@
             rotate: 0;
             pointer-events: none;
             background-color: white;
-            transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration-alt);
         }
     }
 

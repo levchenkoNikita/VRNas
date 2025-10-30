@@ -15,14 +15,19 @@
             margin-top: 4px; // Для того, чтобы сместить arrow ниже центра ссылки
             rotate: 0deg;
             transition-duration: var(--transition-duration);
+
+            @include mobile {
+                scale: 2;
+                translate: -6px 0;
+            }
         }
 
         &.is-active {
-           color: #D1D1D1; 
+            color: #D1D1D1;
 
-           span:nth-child(2) {
+            span:nth-child(2) {
                 rotate: 180deg;
-           }
+            }
         }
 
         @include hover {
@@ -36,20 +41,41 @@
         position: absolute;
         top: 100%;
         left: calc(0px - var(--selectPadding));
+        z-index: 2;
         width: 200px;
         padding: var(--selectPadding);
         border: 1px solid;
         border-image: var(--gradient-white) 1;
+        // height: 0;
+        // padding: 0;
+        // border: none;
         display: none;
         flex-direction: column;
         row-gap: var(--selectPadding);
         background-color: #252532;
-        transition-duration: var(--transition-duration);
+        transition-duration: var(--transition-duration-alt);
 
         &.is-active {
-            display: flex; // Надо разобраться с плавностью появления
+            display: flex;
+            // height: auto;
+            // padding: var(--selectPadding);
+            // border: 1px solid;
+            // border-image: var(--gradient-white) 1;
+
+            // & li {
+            //     display: flex; // Надо разобраться с плавностью появления
+            // }
+        }
+
+        @include mobile {
+            width: 100%;
+            left: 0;
         }
     }
+
+    // &__item {
+    //     display: none;
+    // }
 
     &__option {
         @include hover {
