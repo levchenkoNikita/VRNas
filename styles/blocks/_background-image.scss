@@ -1,0 +1,22 @@
+@use '../helper' as *;
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+
+    &--first {
+        width: 1070px;
+        height: 520px;
+        left: 100%;
+        translate: -100% 0;
+        opacity: 0.4;
+        z-index: -1;
+        background: url('../../images/background-image--first.svg') top/100% no-repeat;
+    }
+
+    &--hero {
+        
+    }
+}

@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <div class="background-image background-image--first">
+
+    </div>
+    <!------------  HEADER  ------------>
     <header class="header">
         <div class="header__inner container">
             <!-- Логотип -->
@@ -20,17 +24,17 @@
             <nav class="header__menu" data-js-header-menu>
                 <ul class="header__list">
                     <li class="header__item">
-                        <a href="#" class="header__link is-current">
+                        <a href="#" class="header__link header__link--a is-current">
                             <span class="header__link-text">Home</span>
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">
+                        <a href="#" class="header__link header__link--a">
                             <span class="header__link-text">About us</span>
                         </a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link">
+                        <a href="#" class="header__link header__link--a">
                             <span class="header__link-text">Service</span>
                         </a>
                     </li>
@@ -107,23 +111,99 @@
                         </div>
                     </li>
                 </ul>
-                <button class="header__button header__button--mobile-s visible-mobile-s button button--transparent">
+                <button
+                    class="header__button header__button--mobile-s visible-mobile-s button button--transparent button--alt">
                     <span class="header__button-text">Contact Us</span>
                 </button>
             </nav>
             <!-- КнопкИ -->
             <div class="header__button-wrapper">
-                <button class="header__button button button--transparent hidden-mobile-s">
+                <button class="header__button button button--transparent button--alt hidden-mobile-s">
                     <span class="header__button-text">Contact Us</span>
                 </button>
-                <button class="header__burger-button burger-button visible-mobile" title="menu" data-js-header-burger-button>
+                <button class="header__burger-button burger-button visible-mobile" title="menu"
+                    data-js-header-burger-button>
                     <span class="burger-button__text visually-hidden">Menu</span>
                     <span class="burger-button__line"></span>
                 </button>
             </div>
         </div>
     </header>
-
+    <!------------  MAIN  ------------>
+    <main class="page">
+        <section class="page__welcome welcome">
+            <div class="welcome__inner container">
+                <div class="welcome__content">
+                    <div class="welcome__content-info welcome__info">
+                        <div class="welcome__info-text">
+                            <h1 class="welcome__info-title">Immerse Yourself in Virtual Reality</h1>
+                            <div class="welcome__info-description">
+                                <p>Experience Unforgettable Events in VR. Bring your events to life like never before
+                                    with our VR services</p>
+                            </div>
+                        </div>
+                        <button class="welcome__info-button button button--fill">
+                            <span>Discover More</span>
+                        </button>
+                    </div>
+                    <div class="welcome__content-clients welcome__clients">
+                        <div class="welcome__clients-reaction welcome__reaction">
+                            <img src="" alt="" class="welcome__reaction-image">
+                            <div class="welcome__reaction-text">
+                                <p>
+                                    <span>32k+</span> Happy Client
+                                </p>
+                            </div>
+                        </div>
+                        <video src="" class="welcome__clients-video"></video>
+                    </div>
+                </div>
+                <div class="welcome__features">
+                    <div class="welcome__expertise welcome__features-block">
+                        <div class="welcome__expertise-image welcome__features-image"></div>
+                        <div class="welcome__expertise-info welcome__features-info">
+                            <h3 class="welcome__expertise-title welcome__features-title">Expertise</h3>
+                            <div class="welcome__expertise-description welcome__features-description">
+                                <p>
+                                    Our team consists of experienced VR developers, designers, and technicians who have
+                                    a passion for VR and a commitment to delivering quality work and give the best
+                                    service
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome__customization welcome__features-block">
+                        <div class="welcome__customization-image welcome__features-image"></div>
+                        <div class="welcome__customization-info welcome__features-info">
+                            <h3 class="welcome__customization-title welcome__features-title">Customization</h3>
+                            <div class="welcome__customization-description welcome__features-description">
+                                <p>
+                                    Every client is unique, and we believe every VR experience should be too. We'll work
+                                    with you to create a customized solution that meets your specific needs and goals
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome__service welcome__features-block">
+                        <div class="welcome__service-image welcome__features-image"></div>
+                        <div class="welcome__service-info welcome__features-info">
+                            <h3 class="welcome__service-title welcome__features-title">Service</h3>
+                            <div class="welcome__service-description welcome__features-description">
+                                <p>
+                                    We believe in providing exceptional customer service, from initial consultation to
+                                    final delivery. Our goal is to ensure you're satisfied with every aspect of your VR
+                                    experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="" alt="" class="welcome__features-hero welcome__hero">
+                    <div class="welcome__features-background-image background-image background-image--hero"></div>
+                </div>
+            </div>
+            <div class="background-image background-image--second"></div>
+        </section>
+    </main>
     <script src="./scripts/main.js" type="module"></script>
 </body>
 

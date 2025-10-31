@@ -63,7 +63,7 @@
             pointer-events: none;
         }
 
-        &-text {
+        &--a {
             @include hover {
                 color: #D1D1D1;
             }
