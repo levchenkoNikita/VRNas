@@ -13,7 +13,7 @@
 
     </div>
     <!------------  HEADER  ------------>
-    <header class="header">
+    <header class="header" data-js-header>
         <div class="header__inner container">
             <!-- Логотип -->
             <a href="#" class="header__logo logo">
@@ -131,6 +131,7 @@
     </header>
     <!------------  MAIN  ------------>
     <main class="page">
+        <div class="background-image background-image--grid"></div>
         <section class="page__welcome welcome">
             <div class="welcome__inner container">
                 <div class="welcome__content">
@@ -148,14 +149,17 @@
                     </div>
                     <div class="welcome__content-clients welcome__clients">
                         <div class="welcome__clients-reaction welcome__reaction">
-                            <img src="" alt="" class="welcome__reaction-image">
+                            <img src="./images/clients--welcome.png" alt="users" class="welcome__reaction-image"
+                                width="127" height="50">
                             <div class="welcome__reaction-text">
                                 <p>
-                                    <span>32k+</span> Happy Client
+                                    <span>32k+</span>&nbsp;Happy Client
                                 </p>
                             </div>
                         </div>
-                        <video src="" class="welcome__clients-video"></video>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" class="welcome__clients-video-wrapper">
+                            <video src="" aria-label="vido" class="welcome__clients-video" width="196" height="128"></video>
+                        </a>
                     </div>
                 </div>
                 <div class="welcome__features">
@@ -197,13 +201,39 @@
                             </div>
                         </div>
                     </div>
-                    <img src="" alt="" class="welcome__features-hero welcome__hero">
-                    <div class="welcome__features-background-image background-image background-image--hero"></div>
+                    <div class="welcome__features-hero welcome__hero ">
+                        <img src="./images/hero--welcome.png" alt="a man with vr-glass" class="welcome__hero-image"
+                            width="526" height="626">
+                        <div class="welcome__hero-background-image background-image background-image--back-hero"></div>
+                    </div>
                 </div>
             </div>
-            <div class="background-image background-image--second"></div>
         </section>
     </main>
+
+    <!-- ПОЛЕЗНЫЙ СКРИПТ ПО НАХОЖДЕНИЮ ПОЗИЦИОНИРОВАННЫХ ПРЕДКОВ -->
+    <!-- <script>
+        // Найти всех позиционированных предков
+        function findPositionedAncestors(element) {
+            const ancestors = [];
+            let current = element.parentElement;
+
+            while (current) {
+                const style = window.getComputedStyle(current);
+                if (style.position !== 'static') {
+                    ancestors.push(current);
+                }
+                current = current.parentElement;
+            }
+
+            return ancestors;
+        }
+
+        // Использование
+        const absoluteEl = document.querySelector('.welcome__hero');
+        console.log('Позиционированные предки:', findPositionedAncestors(absoluteEl));
+    </script> -->
+
     <script src="./scripts/main.js" type="module"></script>
 </body>
 

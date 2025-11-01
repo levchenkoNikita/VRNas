@@ -13,10 +13,41 @@
         translate: -100% 0;
         opacity: 0.4;
         z-index: -1;
-        background: url('../../images/background-image--first.svg') top/100% no-repeat;
+        background: url('../../images/background-image--first.svg') top right/100% no-repeat;
+
+        @include laptop {
+            background-size: 70%;
+        }
+
+        @include mobile {
+            background-size: 50%;
+        }
+
+        @include mobile-s {
+            background-size: 35%;
+        }
     }
 
-    &--hero {
-        
+    &--grid {
+        width: 1097px;
+        height: 721px;
+        top: 184px;
+        z-index: -3;
+        background: url('../../images/grid.png') center left/100% no-repeat;
+
+        @include mobile {
+            top: 400px;
+        }
+    }
+
+    &--back-hero {
+        width: 567px;
+        height: 340px;
+        top: 0;
+        left: 100%;
+        translate: -100% -120%;
+        z-index: -2;
+        filter: blur(140px);
+        background: url('../../images/background-image--second.png') top/100% no-repeat;
     }
 }
