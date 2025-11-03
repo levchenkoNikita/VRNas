@@ -1,0 +1,27 @@
+@use '../helper' as *;
+
+.gradient-title {
+    display: inline-block; //чтобы градиент работал
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 2.24px;
+    //Перекрашиваем в градиент
+    background: var(--Main-Colors-Linear, linear-gradient(90deg, #0CBAF1 0%, #E95CE9 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 12px; // У всех h2-градиент нижний отступ 12px
+}
+
+.subtitle {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58px;
+    letter-spacing: -0.24px;
+
+    @include mobile-s {
+        letter-spacing: -0.16px;
+        line-height: normal;
+    }
+}

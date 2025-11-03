@@ -1,0 +1,74 @@
+@use '../helper' as *;
+
+.about {
+    &__inner {
+        display: flex;
+    }
+
+    &__column {
+        -webkit-box-flex: 0;
+        flex: 0 1 50%;
+
+        &:first-child {
+            position: relative;
+        }
+    }
+
+    &__image {
+        padding-bottom: 120px;
+
+        & img {
+            z-index: 2;
+            padding-left: 1.4375rem;
+            // -o-object-position: bottom;
+            object-position: bottom;
+        }
+    }
+}
+
+.gradient-bg {
+    position: relative;
+
+    &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+    height: 50%;
+    background: -o-linear-gradient(351.46deg,rgba(28,196,249,.8) .72%,rgba(254,105,254,.8) 90.69%);
+    background: linear-gradient(98.54deg, rgba(28, 196, 249, .8) .72%, rgba(254, 105, 254, .8) 90.69%);
+    -webkit-filter: blur(105px);
+    filter: blur(105px);
+    border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
+    -webkit-transform: translate(-50%, -50%) rotate(-30deg);
+    -ms-transform: translate(-50%,-50%) rotate(-30deg);
+    transform: translate(-50%, -50%) rotate(-30deg);
+    }
+}
+
+.ibg {
+    position: relative;
+
+    // & img {
+    //     vertical-align: top;
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 0;
+    //     left: 0;
+    // }
+}
+
+// .ibg_contain img {
+//     -o-object-fit: contain;
+//     object-fit: contain;
+// }
+
+// *, ::after, ::before {
+//     -webkit-box-sizing: inherit;
+//     box-sizing: inherit;
+// }
+
+// https://live.verstaem.online/vrnas/
