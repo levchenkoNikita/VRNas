@@ -82,3 +82,8 @@ $mobile-s-above: 480.1px;
         }
     }
 }
+
+:focus {
+	outline: 1px dashed #E95CE9;
+	outline-offset: 5px;
+}

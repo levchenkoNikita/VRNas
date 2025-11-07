@@ -1,361 +1,361 @@
 @use '../helper' as *;
 
 .welcome {
-    padding-block: 200px 120px;
-
-    // CONTENT
-    &__content {
-        max-width: 540px;
-        margin-bottom: 66px;
-
-        @include tablet {
-            margin-bottom: 70px;
-        }
-
-        @include mobile {
-            margin-bottom: 144px;
-        }
-    }
-
-    &__info {
-        margin-bottom: 42px;
-
-        &-text {
-            margin-bottom: 32px;
-        }
-
-        &-description {
-            max-width: 446px;
-
-            animation-name: info-title;
-            animation-duration: 1.5s;
-
-            & p:not(:last-child) {
-                margin-bottom: 12px;
-            }
-        }
-
-        &-title {
-            margin-bottom: 12px;
-
-            animation-name: info-title;
-            animation-duration: 1s;
-        }
-
-        &-button {
-            animation-name: info-button;
-            animation-duration: 1.5s;
-        }
-    }
-
-    &__clients {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        column-gap: 10px;
-
-        &-video {
-            width: 196px;
-            height: 127px;
-
-            &-wrapper {
-                position: relative;
-                background: url('../../images/video--welcome.png') center/100% no-repeat;
-                transition-duration: var(--transition-duration-alt);
-
-                &::before {
-                    content: '';
-                    @include abs-center;
-                    width: 28px;
-                    height: 28px;
-                    z-index: 2;
-                    background: url('../../icons/play-button--welcome.svg') center/100% no-repeat;
-                    transition-duration: var(--transition-duration);
-                }
-
-                @include hover {
-                    background-size: 110%;
-
-                    &::before {
-                        scale: 1.2;
-                    }
-                }
-            }
-        }
-
-        @include tablet {
-            flex-direction: column;
-            align-items: start;
-            row-gap: 80px;
-        }
-
-        @include mobile {
-            row-gap: 144px;
-        }
-    }
-
-    &__reaction {
-        display: flex;
-        align-items: center;
-        column-gap: 18px;
-
-        animation-name: clients-reaction;
-        animation-duration: 1.5s;
-
-        & p {
-            display: flex;
-            align-items: center;
-
-            & span {
-                position: relative;
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 70%;
-                    left: -8px;
-                    width: 48px;
-                    height: 7px;
-                    background: url('../../images/bottom-line--welcome.png') center/100% no-repeat;
-                }
-            }
-        }
-    }
-
-    // FEATURES
-    &__features {
-        position: relative;
-        overflow: visible;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-        column-gap: 50px;
-        padding: 42px 64px 53px;
-        border: 1px solid;
-        border-image: var(--gradient-white) 1;
-        background-color: #252532;
-
-        animation-name: welcome-features;
-        animation-duration: 1.5s;
-
-        &-block {
-            display: flex;
-            flex-direction: column;
-            row-gap: 42px;
-            max-width: 324px;
-
-            @include mobile {
-                max-width: 460px;
-            }
-        }
-
-        &-image {
-            width: 70px;
-            height: 70px;
-            background: center/100% no-repeat;
-        }
-
-        &-title {
-            margin-bottom: 12px;
-        }
-
-        @include tablet {
-            grid-template-columns: repeat(2, 1fr);
-            row-gap: 50px;
-        }
-
-        @include mobile {
-            grid-template-columns: 1fr;
-            padding: 30px;
-        }
-    }
-
-    &__expertise {
-        &-image {
-            background-image: url('../../icons/vr-glass--welcome.svg');
-        }
-    }
-
-    &__customization {
-        &-image {
-            background-image: url('../../icons/box--welcome.svg');
-        }
-    }
-
-    &__service {
-
-        &-image {
-            background-image: url('../../icons/vr-on-hero--welcome.svg');
-        }
-
-        @include tablet {
-            grid-column: span 2;
-        }
-
-        @include mobile {
-            grid-column: span 1;
-        }
-    }
-
-    // HERO 
-    &__hero {
-        &-image {
-            width: clamp(354px, calc(526 / 1200 * 100 * 1vw), 526px);
-            position: absolute;
-            top: 0;
-            left: 100%;
-            z-index: -1;
-            translate: -100% -100%;
-
-            animation-name: hero;
-            animation-duration: 1.5s;
-
-            @include tablet {
-                width: clamp(354px, calc(526 / 1024 * 100 * 1vw), 526px);
-            }
-
-            @include mobile {
-                animation-name: hero-mobile;
-                width: clamp(354px, calc(526 / 860 * 100 * 1vw), 526px);
-                translate: -70% -100%;
-            }
-
-            @include mobile-s {
-                animation-name: hero-mobile-s;
-                translate: -50% -100%;
-            }
-        }
-
-        &-background-image {
-            animation-name: hero;
-            animation-duration: 1.5s;
-
-            @include tablet {
-                width: clamp(354px, calc(526 / 1024 * 100 * 1vw), 526px);
-            }
-
-            @include mobile {
-                animation-name: hero-mobile;
-                width: clamp(354px, calc(526 / 860 * 100 * 1vw), 526px);
-                translate: -70% -100%;
-            }
-
-            @include mobile-s {
-                animation-name: hero-mobile-s;
-                translate: -50% -100%;
-            }
-        }
-    }
+	padding-block: 200px 120px;
+	
+	// CONTENT
+	&__content {
+		max-width: 540px;
+		margin-bottom: 66px;
+		
+		@include tablet {
+			margin-bottom: 70px;
+		}
+		
+		@include mobile {
+			margin-bottom: 144px;
+		}
+	}
+	
+	&__info {
+		margin-bottom: 42px;
+		
+		&-text {
+			margin-bottom: 32px;
+		}
+		
+		&-description {
+			max-width: 446px;
+			
+			animation-name: info-title;
+			animation-duration: 1.5s;
+			
+			& p:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+		
+		&-title {
+			margin-bottom: 12px;
+			
+			animation-name: info-title;
+			animation-duration: 1s;
+		}
+		
+		&-button {
+			animation-name: info-button;
+			animation-duration: 1.5s;
+		}
+	}
+	
+	&__clients {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 10px;
+		
+		&-video {
+			width: 196px;
+			height: 127px;
+			
+			&-wrapper {
+				position: relative;
+				background: url('../../images/video--welcome.png') center/100% no-repeat;
+				transition-duration: var(--transition-duration-alt);
+				
+				&::before {
+					content: '';
+					@include abs-center;
+					width: 28px;
+					height: 28px;
+					z-index: 2;
+					background: url('../../icons/play-button--welcome.svg') center/100% no-repeat;
+					transition-duration: var(--transition-duration);
+				}
+				
+				@include hover {
+					background-size: 110%;
+					
+					&::before {
+						scale: 1.2;
+					}
+				}
+			}
+		}
+		
+		@include tablet {
+			flex-direction: column;
+			align-items: start;
+			row-gap: 80px;
+		}
+		
+		@include mobile {
+			row-gap: 144px;
+		}
+	}
+	
+	&__reaction {
+		display: flex;
+		align-items: center;
+		column-gap: 18px;
+		
+		animation-name: clients-reaction;
+		animation-duration: 1.5s;
+		
+		& p {
+			display: flex;
+			align-items: center;
+			
+			& span {
+				position: relative;
+				
+				&::after {
+					content: '';
+					position: absolute;
+					top: 70%;
+					left: -8px;
+					width: 48px;
+					height: 7px;
+					background: url('../../images/bottom-line--welcome.png') center/100% no-repeat;
+				}
+			}
+		}
+	}
+	
+	// FEATURES
+	&__features {
+		position: relative;
+		overflow: visible;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-items: center;
+		column-gap: 50px;
+		padding: 42px 64px 53px;
+		border: 1px solid;
+		border-image: var(--gradient-white) 1;
+		background-color: #252532;
+		
+		animation-name: welcome-features;
+		animation-duration: 1.5s;
+		
+		&-block {
+			display: flex;
+			flex-direction: column;
+			row-gap: 42px;
+			max-width: 324px;
+			
+			@include mobile {
+				max-width: 460px;
+			}
+		}
+		
+		&-image {
+			width: 70px;
+			height: 70px;
+			background: center/100% no-repeat;
+		}
+		
+		&-title {
+			margin-bottom: 12px;
+		}
+		
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: 50px;
+		}
+		
+		@include mobile {
+			grid-template-columns: 1fr;
+			padding: 30px;
+		}
+	}
+	
+	&__expertise {
+		&-image {
+			background-image: url('../../icons/vr-glass--welcome.svg');
+		}
+	}
+	
+	&__customization {
+		&-image {
+			background-image: url('../../icons/box--welcome.svg');
+		}
+	}
+	
+	&__service {
+		
+		&-image {
+			background-image: url('../../icons/vr-on-hero--welcome.svg');
+		}
+		
+		@include tablet {
+			grid-column: span 2;
+		}
+		
+		@include mobile {
+			grid-column: span 1;
+		}
+	}
+	
+	// HERO
+	&__hero {
+		&-image {
+			width: clamp(354px, calc(526 / 1200 * 100 * 1vw), 526px);
+			position: absolute;
+			top: 0;
+			left: 100%;
+			z-index: -1;
+			translate: -100% -100%;
+			
+			animation-name: hero;
+			animation-duration: 1.5s;
+			
+			@include tablet {
+				width: clamp(354px, calc(526 / 1024 * 100 * 1vw), 526px);
+			}
+			
+			@include mobile {
+				animation-name: hero-mobile;
+				width: clamp(354px, calc(526 / 860 * 100 * 1vw), 526px);
+				translate: -70% -100%;
+			}
+			
+			@include mobile-s {
+				animation-name: hero-mobile-s;
+				translate: -50% -100%;
+			}
+		}
+		
+		&-background-image {
+			animation-name: hero;
+			animation-duration: 1.5s;
+			
+			@include tablet {
+				width: clamp(354px, calc(526 / 1024 * 100 * 1vw), 526px);
+			}
+			
+			@include mobile {
+				animation-name: hero-mobile;
+				width: clamp(354px, calc(526 / 860 * 100 * 1vw), 526px);
+				translate: -70% -100%;
+			}
+			
+			@include mobile-s {
+				animation-name: hero-mobile-s;
+				translate: -50% -100%;
+			}
+		}
+	}
 }
 
 @keyframes info-title {
-    from {
-        opacity: 0;
-        translate: 0 100px;
-    }
-
-    50% {
-        opacity: 0.4;
-    }
-
-    to {
-        opacity: 1;
-        translate: 0 0;
-    }
+	from {
+		opacity: 0;
+		translate: 0 100px;
+	}
+	
+	50% {
+		opacity: 0.4;
+	}
+	
+	to {
+		opacity: 1;
+		translate: 0 0;
+	}
 }
 
 @keyframes info-description {
-    from {
-        opacity: 0;
-        translate: 0 100px;
-    }
-
-    40% {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-        translate: 0 0;
-    }
+	from {
+		opacity: 0;
+		translate: 0 100px;
+	}
+	
+	40% {
+		opacity: 0;
+	}
+	
+	to {
+		opacity: 1;
+		translate: 0 0;
+	}
 }
 
 @keyframes info-button {
-    from {
-        opacity: 0;
-        translate: 0 100px;
-    }
-
-    40% {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-        translate: 0 0;
-    }
+	from {
+		opacity: 0;
+		translate: 0 100px;
+	}
+	
+	40% {
+		opacity: 0;
+	}
+	
+	to {
+		opacity: 1;
+		translate: 0 0;
+	}
 }
 
 @keyframes clients-reaction {
-    from {
-        opacity: 0;
-        translate: 0 100px;
-    }
-
-    40% {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-        translate: 0 0;
-    }
+	from {
+		opacity: 0;
+		translate: 0 100px;
+	}
+	
+	40% {
+		opacity: 0;
+	}
+	
+	to {
+		opacity: 1;
+		translate: 0 0;
+	}
 }
 
 @keyframes welcome-features {
-    from {
-        opacity: 0;
-        translate: 0 100px;
-    }
-
-    to {
-        opacity: 1;
-        translate: 0 0;
-    }
+	from {
+		opacity: 0;
+		translate: 0 100px;
+	}
+	
+	to {
+		opacity: 1;
+		translate: 0 0;
+	}
 }
 
 @keyframes hero {
-    from {
-        opacity: 0;
-        translate: -50% -100%;
-    }
-
-    to {
-        opacity: 1;
-        translate: -100% -100%;
-    }
+	from {
+		opacity: 0;
+		translate: -50% -100%;
+	}
+	
+	to {
+		opacity: 1;
+		translate: -100% -100%;
+	}
 }
 
 @keyframes hero-mobile {
-    from {
-        opacity: 0;
-        translate: -50% -100%;
-    }
-
-    to {
-        opacity: 1;
-        translate: -70% -100%;
-    }
+	from {
+		opacity: 0;
+		translate: -50% -100%;
+	}
+	
+	to {
+		opacity: 1;
+		translate: -70% -100%;
+	}
 }
 
 @keyframes hero-mobile-s {
-    from {
-        opacity: 0;
-        translate: 0% -100%;
-    }
-
-    to {
-        opacity: 1;
-        translate: -50% -100%;
-    }
+	from {
+		opacity: 0;
+		translate: 0% -100%;
+	}
+	
+	to {
+		opacity: 1;
+		translate: -50% -100%;
+	}
 }
