@@ -1165,7 +1165,7 @@ html.is-lock .header::after {
 }
 .about__image-video-wrapper {
   position: absolute;
-  background: url("../../images/video--about.jpg") center/contain no-repeat;
+  background: url("../../images/video--about.jpg") center/100% no-repeat;
   right: 0;
   bottom: -25px;
   z-index: 2;
