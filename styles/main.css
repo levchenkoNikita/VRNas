@@ -1172,6 +1172,7 @@ html.is-lock .header::after {
   overflow: hidden;
   width: 37.84%;
   aspect-ratio: 196/127;
+  transition-duration: var(--transition-duration-alt);
 }
 .about__image-video-wrapper::before {
   content: "";
@@ -1183,7 +1184,6 @@ html.is-lock .header::after {
   height: 28px;
   z-index: 2;
   background: url(../../icons/play-button--welcome.svg) center/100% no-repeat;
-  transition-duration: var(--transition-duration-alt);
 }
 @media (hover: hover) {
   .about__image-video-wrapper:hover {
@@ -1238,6 +1238,31 @@ html.is-lock .header::after {
 }
 .about__content-item:not(:last-child) {
   margin-bottom: 14px;
+}
+.about__content-button {
+  transition-duration: var(--transition-duration);
+}
+
+[data-js-about-animation] {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+[data-js-about-animation].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-js-about-animation-left] {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+[data-js-about-animation-left].is-visible-for-left {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /*# sourceMappingURL=main.css.map */
