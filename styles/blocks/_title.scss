@@ -5,7 +5,8 @@
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
 	background: linear-gradient(90deg, #0cbaf1 0, #e95ce9 100%);
-	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	margin-bottom: 12px; // Во всех случаях есть отступ вниз на 12px
 }

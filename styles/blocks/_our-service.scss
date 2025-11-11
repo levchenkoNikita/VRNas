@@ -1,0 +1,139 @@
+@use '../helper' as *;
+
+.our-service {
+    padding-block: calc(150px + 23px) 150px;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 10px;
+        padding-right: 42px;
+        margin-bottom: 46px;
+
+        &-body {
+            max-width: 625px;
+            width: 100%;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 36px;
+        row-gap: 32px;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+        }
+
+        @include mobile {
+           grid-template-columns: 1fr; 
+        }
+    }
+
+    &__item {
+        &:nth-child(3n + 2) {
+            & .our-service__article {
+                top: 57px;
+
+                @include tablet {
+                    top: 0;
+                }
+            }
+        }
+
+        &:nth-child(3n + 3) {
+            & .our-service__article {
+                top: calc(57px + 78px);
+
+                @include tablet {
+                    top: 0;
+                }
+            }
+        }
+
+        @include tablet {
+            &:nth-child(2n + 2) {
+                & .our-service__article {
+                    top: 57px;
+
+                    @include mobile {
+                        top: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__article {
+        position: relative;
+        top: 0;
+        left: 0;
+        max-width: 379px;
+        height: 291px;
+        width: 100%;
+        padding-block: 38px 25px;
+        padding-inline: 32px;
+        border: 1px solid;
+        border-image: var(--gradient-white) 1;
+        background-color: rgba($color: #252532, $alpha: 0.6);
+        transition-duration: var(--transition-duration-alt);
+
+        @include laptop {
+            padding-top: 25px;
+        }
+
+        @include hover {
+            border-image: var(--gradient-blue-pink) 1;
+        }
+
+        &-image {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 50px; // Изменил отступ вниз, так как с отступом из фигмы(60px) выглядит не очень красиво
+
+            &--development {
+                background: url('/icons/software--our-service.svg') center/100% no-repeat;
+            }
+
+            &--design {
+                background: url('/icons/design--our-service.svg') center/100% no-repeat;
+            }
+
+            &--consulting {
+                background: url('/icons/review--our-service.svg') center/100% no-repeat;
+            }
+
+            &--games {
+                background: url('/icons/video-console--our-service.svg') center/100% no-repeat;
+            }
+
+            &--events {
+                background: url('/icons/calendar--our-service.svg') center/100% no-repeat;
+            }
+
+            &--entertainment {
+                background: url('/icons/theatre--our-service.svg') center/100% no-repeat;
+            }
+        }
+
+        &-title {
+            margin-bottom: 8px; // Изменил отступ вниз, так как с отступом из фигмы(12px) выглядит не очень красиво
+        }
+
+        &-description {
+            color: #B0B0B2;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 2;
+            letter-spacing: 0;
+        }
+    }
+}
