@@ -7,13 +7,13 @@
     background-color: aqua;
 
     &--first {
+        left: 100%;
+        z-index: -1;
         width: 1070px;
         height: 520px;
-        left: 100%;
-        translate: -100% 0;
-        opacity: 0.4;
-        z-index: -1;
         background: url('../../images/background-image--first.svg') top right/100% no-repeat;
+        opacity: 0.4;
+        translate: -100% 0;
 
         @include laptop {
             background-size: 70%;
@@ -29,10 +29,10 @@
     }
 
     &--grid {
-        width: 1097px;
-        height: 721px;
         top: 184px;
         z-index: -3;
+        width: 1097px;
+        height: 721px;
         background: url('../../images/grid.png') center left/100% no-repeat;
 
         @include mobile {
@@ -41,13 +41,13 @@
     }
 
     &--back-hero {
-        width: 567px;
-        height: 340px;
         top: 0;
         left: 100%;
-        translate: -100% -120%;
         z-index: -2;
-        filter: blur(140px);
+        width: 567px;
+        height: 340px;
         background: url('../../images/background-image--second.png') top/100% no-repeat;
+        filter: blur(140px);
+        translate: -100% -120%;
     }
 }

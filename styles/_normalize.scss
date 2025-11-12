@@ -78,7 +78,7 @@
     Внешний отступ вниз для параграфа без атрибута class,
     который расположен не последним среди своих соседних элементов
    */
- p:where(:not([class]):not(:last-child)) {
+ p:where(:not([class], :last-child)) {
      margin-bottom: var(--paragraphMarginBottom);
  }
  
@@ -109,6 +109,7 @@
       (когда, например, нужно будет "прижать" футер к низу сайта)
      */
      height: 100%;
+
      /**
       Убираем скачок интерфейса по горизонтали
       при появлении / исчезновении скроллбара
@@ -130,6 +131,7 @@
       (когда, например, нужно будет "прижать" футер к низу сайта)
      */
      min-height: 100%;
+
      /**
       Унифицированный интерлиньяж
      */
@@ -158,7 +160,7 @@
    */
  :where([fill]:not([fill="none"],
          [fill^="url"])) {
-     fill: currentColor;
+     fill: currentcolor;
  }
  
  /**
@@ -168,7 +170,7 @@
    */
  :where([stroke]:not([stroke="none"],
          [stroke^="url"])) {
-     stroke: currentColor;
+     stroke: currentcolor;
  }
  
  /**
@@ -182,8 +184,8 @@
     Приведение рамок таблиц в классический 'collapse' вид
    */
  :where(table) {
+     border-color: currentcolor;
      border-collapse: collapse;
-     border-color: currentColor;
  }
  
  /**
@@ -196,6 +198,7 @@
 	::after {
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
+
 //		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
 	}

@@ -2,7 +2,7 @@
 
 .welcome {
 	padding-block: 200px 120px;
-	
+
 	// CONTENT
 	&__content {
 		max-width: 540px;
@@ -26,7 +26,6 @@
 		
 		&-description {
 			max-width: 446px;
-			
 			animation-name: info-title;
 			animation-duration: 1.5s;
 			
@@ -37,7 +36,6 @@
 		
 		&-title {
 			margin-bottom: 12px;
-			
 			animation-name: info-title;
 			animation-duration: 1s;
 		}
@@ -50,38 +48,9 @@
 	
 	&__clients {
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
+		align-items: center;
 		column-gap: 10px;
-		
-		&-video {
-			width: 196px;
-			height: 127px;
-			
-			&-wrapper {
-				position: relative;
-				background: url('../../images/video--welcome.png') center/100% no-repeat;
-				transition-duration: var(--transition-duration-alt);
-				
-				&::before {
-					content: '';
-					@include abs-center;
-					width: 28px;
-					height: 28px;
-					z-index: 2;
-					background: url('../../icons/play-button--welcome.svg') center/100% no-repeat;
-					transition-duration: var(--transition-duration);
-				}
-				
-				@include hover {
-					background-size: 110%;
-					
-					&::before {
-						scale: 1.2;
-					}
-				}
-			}
-		}
 		
 		@include tablet {
 			flex-direction: column;
@@ -92,13 +61,42 @@
 		@include mobile {
 			row-gap: 144px;
 		}
+		
+		&-video {
+			width: 196px;
+			height: 127px;
+			
+			&-wrapper {
+				position: relative;
+				background: url('../../images/video--welcome.png') center/100% no-repeat;
+				transition-duration: var(--transition-duration-alt);
+				
+				@include hover {
+					background-size: 110%;
+					
+					&::before {
+						scale: 1.2;
+					}
+				}
+				
+				&::before {
+					z-index: 2;
+					width: 28px;
+					height: 28px;
+					background: url('../../icons/play-button--welcome.svg') center/100% no-repeat;
+					transition-duration: var(--transition-duration);
+					content: '';
+
+					@include abs-center;
+				}
+			}
+		}
 	}
 	
 	&__reaction {
 		display: flex;
 		align-items: center;
 		column-gap: 18px;
-		
 		animation-name: clients-reaction;
 		animation-duration: 1.5s;
 		
@@ -110,33 +108,42 @@
 				position: relative;
 				
 				&::after {
-					content: '';
 					position: absolute;
 					top: 70%;
 					left: -8px;
 					width: 48px;
 					height: 7px;
 					background: url('../../images/bottom-line--welcome.png') center/100% no-repeat;
+					content: '';
 				}
 			}
 		}
 	}
-	
+
 	// FEATURES
 	&__features {
 		position: relative;
-		overflow: visible;
 		display: grid;
+		padding: 42px 64px 53px;
+		background-color: #252532;
+		border: 1px solid;
+		border-image: var(--gradient-white) 1;
+		animation-name: welcome-features;
+		animation-duration: 1.5s;
+		overflow: visible;
 		grid-template-columns: repeat(3, 1fr);
 		justify-items: center;
 		column-gap: 50px;
-		padding: 42px 64px 53px;
-		border: 1px solid;
-		border-image: var(--gradient-white) 1;
-		background-color: #252532;
 		
-		animation-name: welcome-features;
-		animation-duration: 1.5s;
+		@include tablet {
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: 50px;
+		}
+		
+		@include mobile {
+			grid-template-columns: 1fr;
+			padding: 30px;
+		}
 		
 		&-block {
 			display: flex;
@@ -158,16 +165,6 @@
 		&-title {
 			margin-bottom: 12px;
 		}
-		
-		@include tablet {
-			grid-template-columns: repeat(2, 1fr);
-			row-gap: 50px;
-		}
-		
-		@include mobile {
-			grid-template-columns: 1fr;
-			padding: 30px;
-		}
 	}
 	
 	&__expertise {
@@ -183,11 +180,6 @@
 	}
 	
 	&__service {
-		
-		&-image {
-			background-image: url('../../icons/vr-on-hero--welcome.svg');
-		}
-		
 		@include tablet {
 			grid-column: span 2;
 		}
@@ -195,28 +187,31 @@
 		@include mobile {
 			grid-column: span 1;
 		}
+		
+		&-image {
+			background-image: url('../../icons/vr-on-hero--welcome.svg');
+		}
 	}
-	
+
 	// HERO
 	&__hero {
 		&-image {
-			width: clamp(354px, calc(526 / 1200 * 100 * 1vw), 526px);
 			position: absolute;
 			top: 0;
 			left: 100%;
 			z-index: -1;
-			translate: -100% -100%;
-			
+			width: clamp(354px, calc(526 / 1200 * 100 * 1vw), 526px);
 			animation-name: hero;
 			animation-duration: 1.5s;
+			translate: -100% -100%;
 			
 			@include tablet {
 				width: clamp(354px, calc(526 / 1024 * 100 * 1vw), 526px);
 			}
 			
 			@include mobile {
-				animation-name: hero-mobile;
 				width: clamp(354px, calc(526 / 860 * 100 * 1vw), 526px);
+				animation-name: hero-mobile;
 				translate: -70% -100%;
 			}
 			
@@ -235,8 +230,8 @@
 			}
 			
 			@include mobile {
-				animation-name: hero-mobile;
 				width: clamp(354px, calc(526 / 860 * 100 * 1vw), 526px);
+				animation-name: hero-mobile;
 				translate: -70% -100%;
 			}
 			
@@ -249,7 +244,7 @@
 }
 
 @keyframes info-title {
-	from {
+	0% {
 		opacity: 0;
 		translate: 0 100px;
 	}
@@ -258,14 +253,14 @@
 		opacity: 0.4;
 	}
 	
-	to {
+	100% {
 		opacity: 1;
 		translate: 0 0;
 	}
 }
 
 @keyframes info-description {
-	from {
+	0% {
 		opacity: 0;
 		translate: 0 100px;
 	}
@@ -274,14 +269,14 @@
 		opacity: 0;
 	}
 	
-	to {
+	100% {
 		opacity: 1;
 		translate: 0 0;
 	}
 }
 
 @keyframes info-button {
-	from {
+	0% {
 		opacity: 0;
 		translate: 0 100px;
 	}
@@ -290,14 +285,14 @@
 		opacity: 0;
 	}
 	
-	to {
+	100% {
 		opacity: 1;
 		translate: 0 0;
 	}
 }
 
 @keyframes clients-reaction {
-	from {
+	0% {
 		opacity: 0;
 		translate: 0 100px;
 	}
@@ -306,7 +301,7 @@
 		opacity: 0;
 	}
 	
-	to {
+	100% {
 		opacity: 1;
 		translate: 0 0;
 	}

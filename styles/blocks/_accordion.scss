@@ -1,5 +1,4 @@
 .accordion {
-	
 	&-item:not(:last-child) {
 		margin-bottom: 48px;
 	}
@@ -7,14 +6,15 @@
 	&-item[open] &-title::after{
 		transform: rotate(180deg);
 	}
+
 	&-title {
 		position: relative;
 		padding-bottom: 12px;
 		font-size: 20px;
 		font-weight: 500;
 		color: var(--color-white);
+		border-bottom: 1px solid rgb(255 255 255 / 35%);
 		cursor: pointer;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.35);
 		user-select: none;
 		
 		
@@ -23,15 +23,15 @@
 		}
 		
 		&::after {
-			content: '';
 			position: absolute;
-			background: url("../../icons/accordion/marker.svg") center/100% no-repeat;
-			width: 12px;
-			height: 12px;
 			top: 50%;
 			right: 0;
+			width: 12px;
+			height: 12px;
+			background: url("../../icons/accordion/marker.svg") center/100% no-repeat;
 			transform: translateY(-50%);
 			transition-duration: var(--transition-duration);
+			content: '';
 		}
 	}
 	

@@ -1,71 +1,73 @@
 @use '../helper' as *; // через абсолютный путь не работает, не знаю почему
 
 .button {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-    position: relative;
-    min-width: 140px;
-    height: var(--button-height);
-    padding: 18px 38px;
-    border: 1px solid;
-    text-transform: uppercase;
-    border-image: var(--gradient-blue-pink) 1;
-    background-color: transparent;
-    background-image: var(--gradient-blue-pink);
-    transition-duration: var(--transition-duration);
+  position: relative;
+  min-width: 140px;
+  height: var(--button-height);
+  padding: 18px 38px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+  background-image: var(--gradient-blue-pink);
+  border: 1px solid;
+  border-image: var(--gradient-blue-pink) 1;
+  transition-duration: var(--transition-duration);
 
-    &--transparent {
-        background-image: none;
+  &--transparent {
+    background-image: none;
 
-        &::before {
-            @include abs-center;
-            content: '';
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            background-image: var(--gradient-blue-pink);
-            transition-duration: var(--transition-duration);
-        }
-
-        & span {
-            position: relative;
-            z-index: 2;
-        }
-
-        @include hover {
-            &::before {
-                opacity: 1;
-            }
-        }
+    @include hover {
+      &::before {
+        opacity: 1;
+      }
     }
 
-    &--fill {
-        &::before {
-            @include abs-center;
-            content: '';
-            width: 100%;
-            height: 100%;
-            filter: blur(0px);
-            background-image: var(--gradient-blue-pink);
-            transition-duration: var(--transition-duration);
-        }
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-image: var(--gradient-blue-pink);
+      opacity: 0;
+      transition-duration: var(--transition-duration);
+      content: '';
 
-        & span {
-            position: relative;
-            z-index: 2;
-        }
-
-        @include hover {
-            &::before {
-                filter: blur(20px);
-            }
-        }
+      @include abs-center;
     }
 
-    &--alt {
-        line-height: 1.75;
-        text-transform: none;
+    & span {
+      position: relative;
+      z-index: 2;
     }
+  }
+
+  &--fill {
+    @include hover {
+      &::before {
+        filter: blur(20px);
+      }
+    }
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-image: var(--gradient-blue-pink);
+      filter: blur(0);
+      transition-duration: var(--transition-duration);
+      content: '';
+
+      @include abs-center;
+    }
+
+    & span {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &--alt {
+    line-height: 1.75;
+    text-transform: none;
+  }
 }

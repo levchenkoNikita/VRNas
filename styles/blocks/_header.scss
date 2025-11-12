@@ -6,26 +6,22 @@ html.is-lock .header::after {
 
 .header {
     position: fixed;
-    width: 100%;
     top: 0;
     z-index: 10;
+    width: 100%;
 
     &::after { // Задний фон для скролла
-        content: '';
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 1;
         width: 100%;
         height: 100%;
-        z-index: 1;
+        background-color: rgb(37 37 50 / 70%);
         opacity: 0; // вот что надо заменить
-        background-color: rgba(37, 37, 50, 0.7);
-        -webkit-backdrop-filter: blur(10px);
-        -moz-backdrop-filter: blur(10px);
-        -o-backdrop-filter: blur(10px);
-        -ms-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         transition-duration: var(--transition-duration-alt);
+        content: '';
     }
 
     &.is-scrolling::after,
@@ -40,10 +36,10 @@ html.is-lock .header::after {
 
     &__inner {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        padding-block: 31px;
+        align-items: center;
         transition-duration: var(--transition-duration-alt);
+        padding-block: 31px;
     }
 
     &__logo {
@@ -58,16 +54,16 @@ html.is-lock .header::after {
 
         @include mobile {
             position: absolute;
-            width: 100vw;
-            height: 100vh;
             top: 0;
             left: 0;
             z-index: 1;
+            width: 100vw;
+            height: 100vh;
+            padding: 100px 30px 30px;
+            background-color: rgb(37 37 50 / 95%);
+            transition-duration: var(--transition-duration-alt);
             overflow-y: auto;
             translate: -100% 0;
-            padding: 100px 30px 30px 30px;
-            background-color: rgba(37, 37, 50, 0.95);
-            transition-duration: var(--transition-duration-alt);
 
             &.is-active {
                 translate: 0 0;
@@ -76,8 +72,9 @@ html.is-lock .header::after {
     }
 
     &__list {
-        @include flex-center;
         column-gap: clamp(30px, calc(64 / 1920 * 100 * 1vw), 64px);
+
+        @include flex-center;
 
         @include mobile {
             position: relative;
@@ -101,8 +98,9 @@ html.is-lock .header::after {
         height: 52px;
 
         & span {
-            @include flex-center();
             pointer-events: none;
+
+            @include flex-center;
         }
 
         &--a {
@@ -127,10 +125,10 @@ html.is-lock .header::after {
     }
 
     &__button {
-        font-size: 16px;
-        font-weight: 300;
         height: var(--button-height-alt);
         padding: 12px 24px;
+        font-size: 16px;
+        font-weight: 300;
 
         &--mobile-s {
             width: 100%;

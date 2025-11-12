@@ -1430,8 +1430,6 @@ html.is-lock .header::after {
 
 .advantages__inner {
   display: flex;
-  justify-content: center;
-  align-items: center;
   column-gap: 145px;
 }
 @media (max-width: 1024px) {

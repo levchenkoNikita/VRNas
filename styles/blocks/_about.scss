@@ -22,60 +22,47 @@
 		
 		&-hero {
 			position: absolute;
+			bottom: 0;
+			z-index: 2;
 			width: 100%;
 			height: 100%;
-			bottom: 0;
 			object-fit: contain;
-			z-index: 2;
 		}
 		
 		&--light::after {
-			content: '';
 			position: absolute;
-			background: linear-gradient(98.54deg, rgba(28, 196, 249, .8) .72%, rgba(254, 105, 254, .8) 90.69%);
-			width: 100%;
-			height: 50%;
-			filter: blur(105px);
-			z-index: 1;
 			top: 50%;
 			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 50%;
+			background: linear-gradient(98.54deg, rgb(28 196 249 / 80%) .72%, rgb(254 105 254 / 80%) 90.69%);
+			border-radius: 88% 12% / 20% 37% 63% 80%;
+			filter: blur(105px);
 			transform: translateY(-50%);
-			border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
+			content: '';
 		}
 		
 		&--bg::before {
-			content: '';
 			position: absolute;
+			bottom: 0;
+			z-index: -1;
 			width: 77.03%;
 			height: 79.9%;
 			background-color: #252532;
-			bottom: 0;
-			z-index: -1;
+			content: '';
 		}
 		
 		&-video-wrapper {
 			position: absolute;
-			background: url("../../images/video--about.jpg") center/100% no-repeat;
 			right: 0;
 			bottom: -25px;
 			z-index: 2;
-			overflow: hidden;
 			width: 37.84%;
-			aspect-ratio: 196/127;
+			background: url("../../images/video--about.jpg") center/100% no-repeat;
 			transition-duration: var(--transition-duration-alt);
-			
-			
-			&::before {
-				content: "";
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				translate: -50% -50%;
-				width: 28px;
-				height: 28px;
-				z-index: 2;
-				background: url(../../icons/play-button--welcome.svg) center / 100% no-repeat;
-			}
+			overflow: hidden;
+			aspect-ratio: 196/127;
 			
 			@include hover {
 				background-size: 110%;
@@ -83,6 +70,19 @@
 				&::before {
 					scale: 1.2;
 				}
+			}
+			
+			
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				z-index: 2;
+				width: 28px;
+				height: 28px;
+				background: url("../../icons/play-button--welcome.svg") center / 100% no-repeat;
+				content: "";
+				translate: -50% -50%;
 			}
 		}
 		
@@ -118,14 +118,14 @@
 			color: var(--color-white);
 			
 			&::before {
-				content: '';
 				position: absolute;
-				background-image: url("../../icons/check-box--about.svg");
-				width: 16px;
-				height: 16px;
 				top: 50%;
 				left: 0;
+				width: 16px;
+				height: 16px;
+				background-image: url("../../icons/check-box--about.svg");
 				transform: translateY(-50%);
+				content: '';
 			}
 			
 			&:not(:last-child) {

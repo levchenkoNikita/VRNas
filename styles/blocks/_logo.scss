@@ -1,9 +1,9 @@
 @use '../helper' as *;
 
 .logo {
+    flex-shrink: 0;
     width: 101px;
     height: 30px;
-    flex-shrink: 0;
     transition-duration: var(--transition-duration);
 
     @include hover {

@@ -1,17 +1,12 @@
 :root {
-	--color-white: #ffffff;
-	
+	--color-white: #fff;
 	--font-family: 'Chakra Petch', sans-serif;
-	
 	--container: 1200px;
 	--container-padding-x: 16px;
-	
 	--button-height: 50px;
 	--button-height-alt: 52px;
-	
 	--gradient-blue-pink: linear-gradient(90deg, #0CBAF1, #E95CE9);
-	--gradient-white: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.01));
-	
+	--gradient-white: linear-gradient(90deg, rgb(255 255 255 / 30%), rgb(255 255 255 / 1%));
 	--transition-duration: 0.2s;
 	--transition-duration-alt: 0.4s;
 	

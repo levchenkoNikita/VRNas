@@ -2,6 +2,7 @@
 
 @mixin fluid-text($min, $max) {
     $m-variable: math.div($max, 1920) * 100;
+
     font-size: clamp(#{$min}px, #{$m-variable}vw, #{$max}px);
 }
 
@@ -13,14 +14,12 @@
 }
 
 @mixin flex-center($inline-flex: false) {
-    @if($inline-flex) {
+    @if $inline-flex {
         display: inline-flex;
-    }
-
-    @else {
+    } @else {
         display: flex;
     }
 
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }

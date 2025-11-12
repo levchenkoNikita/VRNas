@@ -2,14 +2,14 @@
 
 .burger-button {
     display: flex;
-    align-items: center;
     justify-content: end;
+    align-items: center;
     width: 52px;
     height: var(--button-height-alt);
     padding: 13px;
+    background-color: transparent;
     border: 1px solid;
     border-image: var(--gradient-blue-pink) 1;
-    background-color: transparent;
 
     &__line {
         display: block;
@@ -20,31 +20,31 @@
         pointer-events: none;
 
         &::before {
-            content: '';
             position: relative;
             top: -6px;
             left: -7px;
+            display: block;
             width: 20px;
             height: 2px;
-            rotate: 0;
-            display: block;
-            pointer-events: none;
             background-color: white;
             transition-duration: var(--transition-duration-alt);
+            content: '';
+            pointer-events: none;
+            rotate: 0;
         }
 
         &::after {
-            content: '';
             position: relative;
             top: 4px;
             left: 6px;
+            display: block;
             width: 7px;
             height: 2px;
-            display: block;
-            rotate: 0;
-            pointer-events: none;
             background-color: white;
             transition-duration: var(--transition-duration-alt);
+            content: '';
+            pointer-events: none;
+            rotate: 0;
         }
     }
 
