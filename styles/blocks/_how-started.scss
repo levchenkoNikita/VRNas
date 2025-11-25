@@ -1,0 +1,147 @@
+@use '../helper' as *;
+
+.how-started {
+    padding-bottom: 100px;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 48px;
+    }
+
+    &__header {
+        max-width: 879px;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__title {
+        opacity: 0;
+        translate: -200% 0;
+        transition-duration: var(--transition-duration-animation);
+
+        &.is-visible {
+            opacity: 1;
+            translate: 0 0;
+        }
+    }
+
+    &__description {
+        opacity: 0;
+        translate: 100% 0;
+        transition-duration: var(--transition-duration-animation);
+
+        &.is-visible {
+            opacity: 1;
+            translate: 0 0;
+        }
+    }
+
+    &__image {
+        @include abs-center;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-radius: 12px;
+        transition-duration: var(--transition-duration-alt);
+
+        @include mobile-s {
+            min-width: 500px;
+            min-height: 250px;
+        }
+
+        &-wrapper {
+            position: relative;
+            max-width: 1200px;
+            width: 100%;
+            height: clamp(425px, 42vw, 522px);
+            overflow: hidden;
+            border-radius: 12px;
+            opacity: 0;
+            translate: 0 100%;
+            transition-duration: var(--transition-duration-animation);
+
+            &.is-visible {
+                opacity: 1;
+                translate: 0 0;
+            }
+
+            &::before {
+                @include abs-center;
+                content: '';
+                width: 100px;
+                height: 100px;
+                transition-duration: var(--transition-duration);
+                background: url('/images/how-started/play-button.png') center/100% no-repeat;
+            }
+
+            @include tablet {
+                height: clamp(320px, 42vw, 425px);
+            }
+
+            @include mobile {
+                height: clamp(250px, 48vw, 320px);
+            }
+
+            @include hover {
+                & .how-started__image {
+                    scale: 1.1;
+                }
+
+                &::before {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+        }
+
+        &-info {
+            position: absolute;
+            top: 52px;
+            left: 34px;
+
+            @include mobile {
+                top: 22px;
+                left: 16px;
+            }
+        }
+
+        &-title {
+            color: #fff;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.43;
+            letter-spacing: 0;
+            padding-block: 2px;
+            padding-inline: 10px;
+            margin-bottom: 12px;
+            border-radius: 16px;
+            background-color: rgba($color: #fff, $alpha: 0.3);
+        }
+
+        &-description {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 1.22;
+            letter-spacing: -0.02em;
+
+            @include mobile {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__button {
+        opacity: 0;
+        translate: 0 200%;
+        transition-duration: var(--transition-duration-animation);
+
+        &.is-visible {
+            opacity: 1;
+            translate: 0 0;
+        }
+    }
+}

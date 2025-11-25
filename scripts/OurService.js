@@ -1,16 +1,30 @@
 class OurService {
 
     selectors = {
+        ourService: "[data-js-our-service]",
         ourServiceList: "[data-js-our-service-list]",
-        ourServiceItem: "[data-js-our-service-item]"
+        ourServiceItem: "[data-js-our-service-item]",
+        ourServiceAnimation: "[data-js-our-service-animation]"
     }
 
     stateClasses = {
         isActive: 'is-active',
-        isLock: 'is-lock'
+        isLock: 'is-lock',
+        isVisible: 'is-visible'
     }
 
     constructor() {
+
+        this.observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add(this.stateClasses.isVisible);
+                    this.observer.unobserve(entry.target);
+                }
+            })
+        })
+
+        this.elementsAnimation = document.querySelector(this.selectors.ourService).querySelectorAll(this.selectors.ourServiceAnimation);
         this.listElement = document.documentElement.querySelector(this.selectors.ourServiceList);
         this.lastElement = null;
         this.bindEvents();
@@ -39,6 +53,10 @@ class OurService {
         });
         this.listElement.addEventListener('mouseout', (event) => {
             this.onHoverOut(event);
+        });
+
+        this.elementsAnimation.forEach(el => {
+            this.observer.observe(el);
         });
     }
 }

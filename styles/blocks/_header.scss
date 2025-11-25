@@ -11,6 +11,7 @@ html.is-lock .header::after {
     width: 100%;
 
     &::after { // Задний фон для скролла
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -19,9 +20,9 @@ html.is-lock .header::after {
         height: 100%;
         background-color: rgb(37 37 50 / 70%);
         opacity: 0; // вот что надо заменить
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         transition-duration: var(--transition-duration-alt);
-        content: '';
     }
 
     &.is-scrolling::after,

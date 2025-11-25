@@ -152,7 +152,7 @@
               </div>
             </div>
             <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
-              class="welcome__clients-video-wrapper" target="_blank">
+              class="welcome__clients-video-wrapper" target="_blank" rel="noopener noreferrer">
               <video src="" aria-label="vido" class="welcome__clients-video" width="196" height="128"></video>
             </a>
           </div>
@@ -210,7 +210,7 @@
         <div class="about__image about__image--bg about__image--light" data-js-about-animation-left>
           <img class="about__image-hero" src="./images/hero--about.png" alt="" loading="lazy" width="518" height="622">
           <a class="about__image-video-wrapper" href="https://www.youtube.com/watch?v=r0iuRANqFIw"
-            aria-label="Watch our video" target="_blank">
+            aria-label="Watch our video" target="_blank" rel="noopener noreferrer">
             <video class="about__image-video" src="" width="186" height="128"></video>
           </a>
         </div>
@@ -237,14 +237,14 @@
       </div>
     </section>
 
-    <section class="page__our-service our-service">
+    <section class="page__our-service our-service" data-js-our-service>
       <div class="our-service__inner container">
         <div class="our-service__header">
           <div class="our-service__header-title-wrapper">
-            <h2 class="our-service__header-title our-service__header-title--h2 title">OUR SERVICE</h2>
-            <h3 class="our-service__header-title our-service__header-title--h3 h2">Our Service</h3>
+            <h2 class="our-service__header-title our-service__header-title--h2 title" data-js-our-service-animation>OUR SERVICE</h2>
+            <h3 class="our-service__header-title our-service__header-title--h3 h2" data-js-our-service-animation>Our Service</h3>
           </div>
-          <div class="our-service__header-body">
+          <div class="our-service__header-body" data-js-our-service-animation>
             <p>
               We use the latest VR hardware and software to create high-quality VR experiences that are
               accessible and affordable. Our goal is to provide exceptional customer service and support,
@@ -256,7 +256,7 @@
         </div>
         <div class="our-service__body">
           <ul class="our-service__list" data-js-our-service-list>
-            <li class="our-service__item">
+            <li class="our-service__item" data-js-our-service-animation>
               <article class="our-service__article our-service__article--1">
                 <div class="our-service__article-image our-service__article-image--development"></div>
                 <div class="our-service__article-body">
@@ -275,7 +275,7 @@
                 </div>
               </article>
             </li>
-            <li class="our-service__item">
+            <li class="our-service__item" data-js-our-service-animation>
               <article class="our-service__article our-service__article--2" data-js-our-service-item>
                 <div class="our-service__article-image our-service__article-image--design"></div>
                 <div class="our-service__article-body">
@@ -294,7 +294,7 @@
                 </div>
               </article>
             </li>
-            <li class="our-service__item">
+            <li class="our-service__item" data-js-our-service-animation>
               <article class="our-service__article our-service__article--3" data-js-our-service-item>
                 <div class="our-service__article-image our-service__article-image--consulting"></div>
                 <div class="our-service__article-body">
@@ -313,7 +313,7 @@
                 </div>
               </article>
             </li>
-            <li class="our-service__item">
+            <li class="our-service__item" data-js-our-service-animation>
               <article class="our-service__article our-service__article--4" data-js-our-service-item>
                 <div class="our-service__article-image our-service__article-image--games"></div>
                 <div class="our-service__article-body">
@@ -332,7 +332,7 @@
                 </div>
               </article>
             </li>
-            <li class="our-service__item">
+            <li class="our-service__item" data-js-our-service-animation>
               <article class="our-service__article our-service__article--5" data-js-our-service-item>
                 <div class="our-service__article-image our-service__article-image--events"></div>
                 <div class="our-service__article-body">
@@ -350,7 +350,7 @@
                 </div>
               </article>
             </li>
-            <li class="our-service__item">
+            <li class="our-service__item" data-js-our-service-animation>
               <article class="our-service__article our-service__article--6" data-js-our-service-item>
                 <div class="our-service__article-image our-service__article-image--entertainment"></div>
                 <div class="our-service__article-body">
@@ -374,7 +374,7 @@
       </div>
     </section>
 
-    <section class="advantages">
+    <section class="page__advantages advantages">
       <div class="advantages__inner container">
         <div class="advantages__content">
           <h2 class="advantages__content-title title">WHY CHOOSE US
@@ -410,10 +410,43 @@
           <img class="advantages__image-hero" src="./images/advantages/hero.png" alt="" loading="lazy" width="563"
             height="622">
           <a class="advantages__image-video-wrapper" href="https://www.youtube.com/watch?v=QHp3ps0rkmU"
-            aria-label="Watch our video" target="_blank">
+            aria-label="Watch our video" target="_blank" rel="noopener noreferrer">
             <video class="advantages__image-video" src="" width="196" height="128"></video>
           </a>
         </div>
+      </div>
+    </section>
+
+    <section class="page__how-started how-started" data-js-how-started>
+      <div class="how-started__inner container">
+        <div class="how-started__header">
+          <h2 class="how-started__title title" data-js-how-started-animation>HOW TO GET STARTED</h2>
+          <h3 class="how-started__description h2" data-js-how-started-animation>
+            Bringing Your Virtual Reality Dreams to Life
+          </h3>
+        </div>
+        <a href="https://youtu.be/UWd-XujFPfw?si=KKoJKhsSieAhHZnU" class="how-started__image-wrapper" rel="noopener noreferrer" data-js-how-started-animation>
+          <img src="/images/how-started/background-image.png" alt="" class="how-started__image" width="1200" height="522" loading="lazy">
+          <div class="how-started__image-info">
+            <h4 class="how-started__image-title another-title">VR Service</h4>
+            <div class="how-started__image-description">
+              <p>
+                How to get started
+              </p>
+            </div>
+          </div>
+          <div class="how-started__image-controls image-controls">
+            <div class="image-controls__left">
+
+            </div>
+            <div class="image-controls__right">
+
+            </div>
+          </div>
+        </a>
+        <button class="how-started__button button button--fill" data-js-how-started-animation>
+          <span>GET STARTED</span>
+        </button>
       </div>
     </section>
 

@@ -1,6 +1,8 @@
 @use '../helper' as *;
 
 .advantages {
+  padding-block: 150px;
+
   &__inner {
     display: flex;
     column-gap: 145px;
