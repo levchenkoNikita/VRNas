@@ -485,7 +485,7 @@
         </picture>
         <ul class="testimonial__client-list">
           <li class="testimonial__client-item" data-js-testimonial-client-position="1">
-            <button class="testimonial__client-button" type="button">
+            <button class="testimonial__client-button" type="button" title="empty">
               <picture>
                 <source srcset="./images/testimonial/client-1.webp" type="image/webp" />
                 <img class="testimonial__client-image" src="./images/testimonial/client-1.png" alt="" width="50"
@@ -503,7 +503,7 @@
             </div>
           </li>
           <li class="testimonial__client-item" data-js-testimonial-client-position="2">
-            <button class="testimonial__client-button" type="button">
+            <button class="testimonial__client-button" type="button" title="empty">
               <picture>
                 <source srcset="./images/testimonial/client-2.webp" type="image/webp" />
                 <img class="testimonial__client-image" src="./images/testimonial/client-2.png" alt="" width="50"
@@ -521,7 +521,7 @@
             </div>
           </li>
           <li class="testimonial__client-item" data-js-testimonial-client-position="3">
-            <button class="testimonial__client-button" type="button">
+            <button class="testimonial__client-button" type="button" title="empty">
               <picture>
                 <source srcset="./images/testimonial/client-3.webp" type="image/webp" />
                 <img class="testimonial__client-image" src="./images/testimonial/client-3.png" alt="" width="50"
@@ -539,7 +539,7 @@
             </div>
           </li>
           <li class="testimonial__client-item" data-js-testimonial-client-position="4">
-            <button class="testimonial__client-button" type="button">
+            <button class="testimonial__client-button" type="button" title="empty">
               <picture>
                 <source srcset="./images/testimonial/client-4.webp" type="image/webp" />
                 <img class="testimonial__client-image" src="./images/testimonial/client-4.png" alt="" width="50"
@@ -557,7 +557,7 @@
             </div>
           </li>
           <li class="testimonial__client-item" data-js-testimonial-client-position="5">
-            <button class="testimonial__client-button" type="button">
+            <button class="testimonial__client-button" type="button" title="empty">
               <picture>
                 <source srcset="./images/testimonial/client-5.webp" type="image/webp" />
                 <img class="testimonial__client-image" src="./images/testimonial/client-5.png" alt="" width="50"
@@ -575,7 +575,7 @@
             </div>
           </li>
           <li class="testimonial__client-item" data-js-testimonial-client-position="6">
-            <button class="testimonial__client-button" type="button">
+            <button class="testimonial__client-button" type="button" title="empty">
               <picture>
                 <source srcset="./images/testimonial/client-6.webp" type="image/webp" />
                 <img class="testimonial__client-image" src="./images/testimonial/client-6.png" alt="" width="50"
@@ -597,16 +597,16 @@
     </section>
 
     <!------------  PRICING  ------------>
-    <section class="page__pricing pricing">
+    <section class="page__pricing pricing" data-js-pricing>
       <div class="pricing__inner container">
         <div class="pricing__header">
-          <h2 class="pricing__header-title pricing__header-title--h2 title">
+          <h2 class="pricing__header-title pricing__header-title--h2 title" data-js-animation>
             our pricing
           </h2>
-          <h3 class="pricing__header-title pricing__header-title--h3 h2">
+          <h3 class="pricing__header-title pricing__header-title--h3 h2" data-js-animation>
             Affordable VR Services for Everyone
           </h3>
-          <div class="pricing__header-description">
+          <div class="pricing__header-description" data-js-animation>
             <p>
               At VRNas, we believe that everyone should have access to the benefits of VR. That's why we offer a range
               of
@@ -614,17 +614,19 @@
             </p>
           </div>
         </div>
-        <div class="pricing__body">
+        <div class="pricing__body" data-js-animation>
           <div class="pricing__body-left">
             <ul class="pricing__body-list">
-              <li class="pricing__body-item">
+              <li class="pricing__body-item" data-js-animation>
                 <article class="pricing__body-article">
-                  <div class="pricing__body-article-icon">
-                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M2.375 11.8747C2.375 13.6236 3.79277 15.0413 5.54167 15.0413H12.6667C14.8528 15.0413 16.625 13.2691 16.625 11.083C16.625 8.89688 14.8528 7.12467 12.6667 7.12467C12.6403 7.12467 12.6139 7.12493 12.5876 7.12545C12.2212 5.31829 10.6236 3.95801 8.70833 3.95801C6.52221 3.95801 4.75 5.73021 4.75 7.91634C4.75 8.21467 4.783 8.5053 4.84556 8.78476C3.43153 9.10194 2.375 10.3649 2.375 11.8747Z"
-                        stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                  <div class="pricing__body-article-icon-wrapper">
+                    <div class="pricing__body-article-icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.375 11.8747C2.375 13.6236 3.79277 15.0413 5.54167 15.0413H12.6667C14.8528 15.0413 16.625 13.2691 16.625 11.083C16.625 8.89688 14.8528 7.12467 12.6667 7.12467C12.6403 7.12467 12.6139 7.12493 12.5876 7.12545C12.2212 5.31829 10.6236 3.95801 8.70833 3.95801C6.52221 3.95801 4.75 5.73021 4.75 7.91634C4.75 8.21467 4.783 8.5053 4.84556 8.78476C3.43153 9.10194 2.375 10.3649 2.375 11.8747Z"
+                          stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
                   </div>
                   <div class="pricing__body-article-info">
                     <h4 class="pricing__body-article-info-title">
@@ -640,47 +642,51 @@
                   </div>
                 </article>
               </li>
-              <li class="pricing__body-item">
+              <li class="pricing__body-item" data-js-animation>
                 <article class="pricing__body-article">
-                  <div class="pricing__body-article-icon">
-                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M2.375 11.8747C2.375 13.6236 3.79277 15.0413 5.54167 15.0413H12.6667C14.8528 15.0413 16.625 13.2691 16.625 11.083C16.625 8.89688 14.8528 7.12467 12.6667 7.12467C12.6403 7.12467 12.6139 7.12493 12.5876 7.12545C12.2212 5.31829 10.6236 3.95801 8.70833 3.95801C6.52221 3.95801 4.75 5.73021 4.75 7.91634C4.75 8.21467 4.783 8.5053 4.84556 8.78476C3.43153 9.10194 2.375 10.3649 2.375 11.8747Z"
-                        stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                  <div class="pricing__body-article-icon-wrapper">
+                    <div class="pricing__body-article-icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.375 11.8747C2.375 13.6236 3.79277 15.0413 5.54167 15.0413H12.6667C14.8528 15.0413 16.625 13.2691 16.625 11.083C16.625 8.89688 14.8528 7.12467 12.6667 7.12467C12.6403 7.12467 12.6139 7.12493 12.5876 7.12545C12.2212 5.31829 10.6236 3.95801 8.70833 3.95801C6.52221 3.95801 4.75 5.73021 4.75 7.91634C4.75 8.21467 4.783 8.5053 4.84556 8.78476C3.43153 9.10194 2.375 10.3649 2.375 11.8747Z"
+                          stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
                   </div>
                   <div class="pricing__body-article-info">
                     <h4 class="pricing__body-article-info-title">
-                      Customizable Packages
+                      Flexible Payment Options
                     </h4>
                     <div class="pricing__body-article-info-description">
                       <p>
-                        We understand that each project is unique, so we offer customizable packages to ensure that you
-                        get the services you need at a price that works for you. Our team will work with you to create a
-                        package that meets your specific goals and budget.
+                        We offer flexible payment options to make it easy for you to get started with our services. We
+                        accept various payment methods, including credit cards, bank transfers, and PayPal, and we can
+                        also work with you to create a payment plan that suits your needs.
                       </p>
                     </div>
                   </div>
                 </article>
               </li>
-              <li class="pricing__body-item">
+              <li class="pricing__body-item" data-js-animation>
                 <article class="pricing__body-article">
-                  <div class="pricing__body-article-icon">
-                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M2.375 11.8747C2.375 13.6236 3.79277 15.0413 5.54167 15.0413H12.6667C14.8528 15.0413 16.625 13.2691 16.625 11.083C16.625 8.89688 14.8528 7.12467 12.6667 7.12467C12.6403 7.12467 12.6139 7.12493 12.5876 7.12545C12.2212 5.31829 10.6236 3.95801 8.70833 3.95801C6.52221 3.95801 4.75 5.73021 4.75 7.91634C4.75 8.21467 4.783 8.5053 4.84556 8.78476C3.43153 9.10194 2.375 10.3649 2.375 11.8747Z"
-                        stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
+                  <div class="pricing__body-article-icon-wrapper">
+                    <div class="pricing__body-article-icon">
+                      <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.375 11.8747C2.375 13.6236 3.79277 15.0413 5.54167 15.0413H12.6667C14.8528 15.0413 16.625 13.2691 16.625 11.083C16.625 8.89688 14.8528 7.12467 12.6667 7.12467C12.6403 7.12467 12.6139 7.12493 12.5876 7.12545C12.2212 5.31829 10.6236 3.95801 8.70833 3.95801C6.52221 3.95801 4.75 5.73021 4.75 7.91634C4.75 8.21467 4.783 8.5053 4.84556 8.78476C3.43153 9.10194 2.375 10.3649 2.375 11.8747Z"
+                          stroke="#D4D4D8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
                   </div>
                   <div class="pricing__body-article-info">
                     <h4 class="pricing__body-article-info-title">
-                      Customizable Packages
+                      Satisfaction Guarantee
                     </h4>
                     <div class="pricing__body-article-info-description">
                       <p>
-                        We understand that each project is unique, so we offer customizable packages to ensure that you
-                        get the services you need at a price that works for you. Our team will work with you to create a
-                        package that meets your specific goals and budget.
+                        We stand behind our services and are committed to ensuring that you are completely satisfied
+                        with the final product. If for any reason you are not happy with our services, we will work with
+                        you to make it right or provide a full refund.
                       </p>
                     </div>
                   </div>
@@ -689,15 +695,21 @@
             </ul>
           </div>
           <div class="pricing__body-right">
-            <!-- <img src="/images/pricing/hero.png" alt="human"
-              class="pricing__body-right-background-image pricing__body-right-background-image--human background-image"
-              width="360" height="520" loading="lazy"> -->
-            <div
-              class="pricing__body-right-background-image pricing__body-right-background-image--blur background-image background-image--back-hero">
+            <img src="/images/pricing/hero.png" alt="human" class="
+              pricing__body-right-background-image
+              pricing__body-right-background-image--human
+              background-image
+              " width="360" height="520" loading="lazy" data-js-animation>
+            <div class="
+              pricing__body-right-background-image
+              pricing__body-right-background-image--blur
+              background-image
+              background-image--back-hero
+              ">
 
             </div>
           </div>
-          <div class="pricing__abs-block">
+          <div class="pricing__abs-block" data-js-animation>
             <div class="pricing__abs-block-cost-wrapper">
               <p class="pricing__abs-block-cost-header">
                 Start from
@@ -720,41 +732,76 @@
     </section>
 
     <!------------  PARTNERS  ------------>
-    <!-- <section class="page__partners partners">
-      <div class="partners__header">
-        <h2 class="partners__header-title partners__header-title--h2 title">
-          Our Trusted Partners
-        </h2>
-        <h3 class="partners__header-title partners__header-title--h3 h2">
-          Discover the Companies We Work With
-        </h3>
-      </div>
-      <div class="partners__body">
-        <div class="partners__body-line partners__body-line-1">
-          <div class="partners__body-line partners__body-line-2">
-            <div class="partners__body-line partners__body-line-3">
-              <div class="partners__body-line partners__body-line-4">
-                <div class="partners__body-block-hero">
-                  <img src="" alt="" class="partners__body-block-hero-image">
-                  <div class="partners__body-block-hero-blur background-image background-image--back-hero">
+    <section class="page__partners partners" data-js-partners>
+      <div class="partners__inner container">
+        <div class="partners__header">
+          <h2 class="partners__header-title partners__header-title--h2 title" data-js-animation>
+            Our Trusted Partners
+          </h2>
+          <h3 class="partners__header-title partners__header-title--h3 h2" data-js-animation>
+            Discover the Companies We Work With
+          </h3>
+        </div>
+        <div class="partners__body" data-js-animation>
+          <div class="partners__body-line partners__body-line-1">
+            <div class="partners__body-line partners__body-line-2">
+              <div class="partners__body-line partners__body-line-2-overlay">
+                <div class="partners__body-line partners__body-line-3">
+                  <div class="partners__body-line partners__body-line-4">
+                    <div class="partners__body-blur background-image background-image--back-hero">
 
+                    </div>
+                    <div class="partners__body-block-hero">
+                      <img src="/images/partners/hero-1.png" alt="human" class="partners__body-block-hero-image" width="707" height="554" loading="lazy">
+                    </div>
                   </div>
                 </div>
               </div>
+              <ul class="partners__body-list companies">
+                <li class="companies__item" data-js-animation>
+                  <a href="#" class="companies__link" title="company-1">
+                    <img src="/images/partners/company-1.png" alt="company-1" class="companies__img companies__img--1">
+                  </a>
+                </li>
+                <li class="companies__item" data-js-animation>
+                  <a href="#" class="companies__link" title="company-1">
+                    <img src="/images/partners/company-2.png" alt="company-1" class="companies__img companies__img--2">
+                  </a>
+                </li>
+                <li class="companies__item" data-js-animation>
+                  <a href="#" class="companies__link" title="company-1">
+                    <img src="/images/partners/company-3.png" alt="company-1" class="companies__img companies__img--3">
+                  </a>
+                </li>
+                <li class="companies__item" data-js-animation>
+                  <a href="#" class="companies__link" title="company-1">
+                    <img src="/images/partners/company-4.png" alt="company-1" class="companies__img companies__img--4">
+                  </a>
+                </li>
+                <li class="companies__item" data-js-animation>
+                  <a href="#" class="companies__link" title="company-1">
+                    <img src="/images/partners/company-5.png" alt="company-1" class="companies__img companies__img--5">
+                  </a>
+                </li>
+                <li class="companies__item" data-js-animation>
+                  <a href="#" class="companies__link" title="company-1">
+                    <img src="/images/partners/company-6.png" alt="company-1" class="companies__img companies__img--6">
+                  </a>
+                </li>
+                <li class="companies__item" data-js-animation>
+                  <a href="#" class="companies__link" title="company-1">
+                    <img src="/images/partners/company-7.png" alt="company-1" class="companies__img companies__img--7">
+                  </a>
+                </li>
+              </ul>
             </div>
+            <div class="partners__body-line-1-overlay"></div>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
-
-    <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus ab incidunt, expedita dolor
-    exercitationem, voluptatum totam fugiat qui, consequatur quaerat cum odit illum laudantium. Itaque error atque natus
-    porro aliquam voluptate nam. Provident autem quaerat ipsum iste sed nostrum ea repellat quo, culpa quos. Iusto quia
-    sapiente eum quos incidunt non tempora nesciunt fugiat! Dolores minus at, et temporibus velit doloremque
-    consequatur. Facere nesciunt qui, amet fuga laborum nulla atque? Animi voluptatum illum omnis in laborum expedita
-    impedit nulla eaque, reprehenderit odit aperiam, corporis laudantium veniam libero eligendi. Odio, atque aut?
-    Nostrum ullam cum quod eligendi repellat ipsa voluptas. -->
+    <div class="end">fff</div>
   </main>
 
   <!-- ПОЛЕЗНЫЙ СКРИПТ ПО НАХОЖДЕНИЮ ПОЗИЦИОНИРОВАННЫХ ПРЕДКОВ -->

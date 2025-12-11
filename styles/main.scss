@@ -19,7 +19,9 @@
 @use './blocks/image-controls';
 @use "./blocks/testimonial";
 @use "./blocks/pricing";
+@use "./blocks/partners";
+@use "./blocks/companies";
 
-.last-p {
-    margin-top: 100px;
+.end {
+    margin-top: 3000px;
 }

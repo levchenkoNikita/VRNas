@@ -16,6 +16,8 @@
   border-image: var(--gradient-blue-pink) 1;
   transition-duration: var(--transition-duration);
 
+
+
   &--transparent {
     background-image: none;
 
@@ -63,6 +65,7 @@
     & span {
       position: relative;
       z-index: 2;
+      pointer-events: none;
     }
   }
 
