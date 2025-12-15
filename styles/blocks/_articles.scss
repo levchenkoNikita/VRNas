@@ -1,0 +1,99 @@
+@use "../helper" as *;
+
+.articles {
+    position: relative;
+    z-index: 10;
+    padding-bottom: 64px;
+
+    &__inner {
+        position: relative;
+    }
+
+    &__header {
+        padding-bottom: 72px;
+
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 20px;
+        }
+
+        &-button {
+            background-color: rgba($color: #fff, $alpha: 0.06);
+        }
+    }
+
+    &__body {
+        position: absolute;
+        top: calc(91px + 72px);
+        left: calc(var(--container-padding-x) - 46px);
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+
+    &__footer {
+        margin-top: 827px;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 20px;
+        padding-inline: 74px;
+        padding-block: 38px 31px;
+        border-radius: 4px;
+        background: var(--gradient-blue-pink) center/100% no-repeat;
+
+        &-title {
+            width: 520px;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 1.45;
+            letter-spacing: -0.005em;
+        }
+
+        &-wrapper {
+            @include flex-center;
+            position: relative;
+            
+        }
+
+        &-label {
+            position: absolute;
+            top: 16px;
+            left: 14px;
+        }
+
+        &-input {
+            color: #fff;
+            width: 365px;
+            height: 56px;
+            padding-block: 16px;
+            padding-inline: 46px 14px;
+            border: none;
+            border-radius: 2px;
+            background-color: rgba($color: #fff, $alpha: 0.07);
+
+            &::placeholder {
+                color: #fff;
+            }
+        }
+
+        &-button {
+            position: absolute;
+            top: 3px;
+            left: calc(100% - 4px);
+            translate: -100% 0;
+            width: 49px;
+            height: 49px;
+            background-color: rgba($color: #fff, $alpha: 0.21);
+
+            & span {
+                @include flex-center;
+            }
+        }
+    }
+}

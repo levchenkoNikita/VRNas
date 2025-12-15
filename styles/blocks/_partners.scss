@@ -1,7 +1,7 @@
 @use '../helper' as *;
 
 .partners {
-    padding-block: 120px;
+    padding-top: 120px;
 
     &__inner {
         display: flex;
@@ -150,6 +150,7 @@
                 z-index: 4;
                 min-width: 780px;
                 height: auto;
+                border-radius: 50%;
 
                 @include laptop {
                     min-width: 599px;

@@ -21,7 +21,7 @@
 @use "./blocks/pricing";
 @use "./blocks/partners";
 @use "./blocks/companies";
-
-.end {
-    margin-top: 3000px;
-}
+@use "./blocks/articles";
+@use "./blocks/pop-art";
+@use "./blocks/rec-art";
+@use "./blocks/footer";

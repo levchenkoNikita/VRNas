@@ -1,0 +1,115 @@
+@use '../helper' as *;
+
+.pop-art {
+    position: relative;
+    left: 46px;
+
+    &__title {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: -0.005em;
+        margin-bottom: 32px;
+    }   
+
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 44px;
+    }
+
+    &__list {
+        width: 636px;
+        height: 425px;
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__item {
+        width: inherit;
+        height: inherit;
+    }
+
+    &__article {
+        width: inherit;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        row-gap: 12px;
+        padding: 24px;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url('/images/articles/pop-art/1.png');
+
+        &-wrapper {
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            column-gap: 20px;
+        }
+
+        &-subtitle {
+            width: 86px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.43;
+            padding-block: 2px;
+            padding-inline: 10px;
+            border-radius: 16px;
+            background-color: rgba($color: #fff, $alpha: 0.3);
+        }
+
+        &-title {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: -0.005em;
+        }
+
+        &-button {
+            --sizeButton: 50px;
+
+            min-width: auto;
+            width: var(--sizeButton);
+            height: var(--sizeButton);
+            padding: 16px;
+            margin-top: 10px;
+        }
+    }
+
+    &__paganation {
+        &-list {
+            @include flex-center;
+            column-gap: 12px;
+        }
+
+        &-button {
+            width: 9px;
+            height: 3px;
+            border-radius: 32px;
+            background-color: rgba($color: #fff, $alpha: 0.31);
+            transition-duration: var(--transition-duration);
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            &.is-active {
+                width: 17px;
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__background-image {
+        top: 3%;
+        left: -30%;
+        translate: 0 0;
+        filter: blur(60px);
+    }
+}
