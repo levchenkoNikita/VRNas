@@ -803,7 +803,7 @@
     </section>
 
     <!------------  ARTICLES  ------------>
-    <!-- <section class="page__articles articles">
+    <section class="page__articles articles" data-js-article>
       <div class="articles__inner container">
         <div class="articles__header">
           <h2 class="articles__header-title articles__header-title--h2 title">
@@ -826,9 +826,9 @@
               Popular Article
             </h4>
             <div class="pop-art__slider">
-              <ul class="pop-art__list">
+              <ul class="pop-art__list" data-js-pop-article-list>
                 <li class="pop-art__item">
-                  <article class="pop-art__article pop-art__article--1">
+                  <article class="pop-art__article pop-art__article--1" data-js-pop-article-element>
                     <h5 class="pop-art__article-subtitle">VR Games</h5>
                     <div class="pop-art__article-wrapper">
                       <h6 class="pop-art__article-title">Entertainment Goes Virtual: The Rise of VR Gaming</h6>
@@ -853,7 +853,7 @@
                   </article>
                 </li>
                 <li class="pop-art__item">
-                  <article class="pop-art__article">
+                  <article class="pop-art__article" data-js-pop-article-element>
                     <h5 class="pop-art__article-subtitle"></h5>
                     <div class="pop-art__article-wrapper">
                       <h6 class="pop-art__article-title"></h6>
@@ -878,7 +878,7 @@
                   </article>
                 </li>
                 <li class="pop-art__item">
-                  <article class="pop-art__article">
+                  <article class="pop-art__article" data-js-pop-article-element>
                     <h5 class="pop-art__article-subtitle"></h5>
                     <div class="pop-art__article-wrapper">
                       <h6 class="pop-art__article-title"></h6>
@@ -903,7 +903,7 @@
                   </article>
                 </li>
                 <li class="pop-art__item">
-                  <article class="pop-art__article">
+                  <article class="pop-art__article" data-js-pop-article-element>
                     <h5 class="pop-art__article-subtitle"></h5>
                     <div class="pop-art__article-wrapper">
                       <h6 class="pop-art__article-title"></h6>
@@ -928,24 +928,24 @@
                   </article>
                 </li>
               </ul>
-              <ul class="pop-art__paganation-list">
+              <ul class="pop-art__paganation-list" data-js-pop-paganation-list>
                 <li class="pop-art__paganation-item">
-                  <button class="pop-art__paganation-button is-active" title="first element">
+                  <button class="pop-art__paganation-button is-active" title="first element" data-js-pop-paganation-button="1">
 
                   </button>
                 </li>
                 <li class="pop-art__paganation-item">
-                  <button class="pop-art__paganation-button" title="first element">
+                  <button class="pop-art__paganation-button" title="first element" data-js-pop-paganation-button="2">
 
                   </button>
                 </li>
                 <li class="pop-art__paganation-item">
-                  <button class="pop-art__paganation-button" title="first element">
+                  <button class="pop-art__paganation-button" title="first element" data-js-pop-paganation-button="3">
 
                   </button>
                 </li>
                 <li class="pop-art__paganation-item">
-                  <button class="pop-art__paganation-button" title="first element">
+                  <button class="pop-art__paganation-button" title="first element" data-js-pop-paganation-button="4">
 
                   </button>
                 </li>
@@ -1175,7 +1175,7 @@
           </form>
         </div>
       </div>
-    </section> -->
+    </section>
 
   </main>
 
@@ -1357,29 +1357,6 @@
 
     </div>
   </footer>
-
-  <!-- ПОЛЕЗНЫЙ СКРИПТ ПО НАХОЖДЕНИЮ ПОЗИЦИОНИРОВАННЫХ ПРЕДКОВ -->
-  <!-- <script>
-// Найти всех позиционированных предков
-function findPositionedAncestors(element) {
-    const ancestors = [];
-    let current = element.parentElement;
-
-    while (current) {
-        const style = window.getComputedStyle(current);
-        if (style.position !== 'static') {
-            ancestors.push(current);
-        }
-        current = current.parentElement;
-    }
-
-    return ancestors;
-}
-
-// Использование
-const absoluteEl = document.querySelector('.welcome__hero');
-console.log('Позиционированные предки:', findPositionedAncestors(absoluteEl));
-</script> -->
 
   <script src="./scripts/main.js" type="module"></script>
 </body>

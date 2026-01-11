@@ -5,6 +5,7 @@ import HowStarted from "./HowStarted.js";
 import Testimonial from "./Testimonial.js";
 import Pricing from "./Pricing.js";
 import Partners from "./Partners.js";
+import Article from "./Article.js";
 
 new Header();
 new About();
@@ -13,3 +14,4 @@ new HowStarted();
 new Testimonial();
 new Pricing();
 new Partners();
+new Article();
