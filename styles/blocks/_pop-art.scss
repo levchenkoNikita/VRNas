@@ -43,6 +43,7 @@
         background-size: 100%;
         background-repeat: no-repeat;
         background-image: url('/images/articles/pop-art/1.png');
+        transition-duration: var(--transition-duration-slider);
 
         &-wrapper {
             display: flex;
