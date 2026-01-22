@@ -1,12 +1,12 @@
 @use "../helper" as *;
 
 .articles {
-    position: relative;
-    z-index: 10;
+    // position: relative;
+    // z-index: 10;
     padding-bottom: 64px;
 
     &__inner {
-        position: relative;
+        // position: relative;
     }
 
     &__header {
@@ -44,32 +44,27 @@
     }
 
     &__body {
-        position: absolute;
-        top: calc(91px + 72px);
-        left: calc(var(--container-padding-x) - 46px);
+        position: relative;
         display: flex;
         align-items: center;
-        justify-content: end;
-        opacity: 0;
-        translate: 0 100%;
-        transition-duration: var(--transition-duration-animation);
+        column-gap: 51px;
 
-        &.is-visible {
-            opacity: 1;
-            translate: 0 0;
+        @include tablet {
+            flex-direction: column;
+            row-gap: 32px;
         }
     }
 
     &__footer {
-        margin-top: 827px;
-        opacity: 0;
-        translate: 0 100%;
-        transition-duration: var(--transition-duration-animation);
+        margin-top: 100px;
+        // opacity: 0;
+        // translate: 0 100%;
+        // transition-duration: var(--transition-duration-animation);
 
-        &.is-visible {
-            opacity: 1;
-            translate: 0 0;
-        }
+        // &.is-visible {
+        //     opacity: 1;
+        //     translate: 0 0;
+        // }
     }
 
     &__form {
@@ -82,12 +77,28 @@
         border-radius: 4px;
         background: var(--gradient-blue-pink) center/100% no-repeat;
 
+        @include tablet {
+            flex-direction: column;
+            row-gap: 20px;
+            padding-inline: 20px;
+        }
+
         &-title {
-            width: 520px;
+            max-width: 520px;
+            width: 100%;
             font-size: 40px;
             font-weight: 600;
             line-height: 1.45;
             letter-spacing: -0.005em;
+
+            @include tablet {
+                font-size: 32px;
+                text-align: center;
+            }
+
+            @include mobile {
+                font-size: 30px;
+            }
         }
 
         &-wrapper {

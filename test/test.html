@@ -1,273 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
 
-
+    <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
 
-	
-	
+    <div class="div" style="color: black; border-radius: 15px;">
+        <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores perspiciatis, porro nostrum placeat
+            facere
+            eligendi eius sed sint? Quis doloremque animi maiores, nobis facilis, officiis molestiae necessitatibus
+            fugiat
+            minus aperiam ea eum ab ex, consequuntur velit repudiandae. Ipsa esse aliquid architecto adipisci id neque
+            similique inventore iste repudiandae corporis at obcaecati consectetur expedita, pariatur atque! In enim
+            nostrum, autem accusantium atque vero corrupti alias, modi amet totam dolorem? Laborum illum tempore odit
+            adipisci ipsum obcaecati ipsam tempora nemo cum doloremque maxime distinctio sint illo dicta culpa eaque,
+            assumenda, praesentium numquam accusamus dolor nulla. Culpa dolore, ab ipsam et soluta explicabo!
+        </div>
+    </div>
+    <button class="button" style="margin-top: 100px;">
+        Нажми
+    </button>
+    <script src="./script.js"></script>
 </body>
-	
+
 </html>
-
-
-
-
-<!-- <section class="about">
-		<div class="about__inner container">
-			<div class="about__content">
-				<div class="about__content-bg">
-					<div class="about__content-bg-wrapper">
-						<img 
-							class="about__content-bg-wrapper-man"
-							src="../images/about/about-man-image.png" 
-							alt="a man in glasses"
-							width="518" height="622" loading="lazy"
-						/>
-						<div class="about__content-bg-wrapper-blur"></div>
-					</div>
-					<a
-						href="https://www.youtube.com/shorts/IrM8k7D32ng"
-						class="about__content-video-link"
-					>
-						<video
-							src=""
-							aria-label="video"
-							class="about__content-video"
-							width="196"
-							height="128"
-						></video>
-					</a>
-				</div>
-			</div>
-			<div class="about__body">
-				<h2 class="about__body-title gradient-title">ABOUT US</h2> 
-				<h3 class="about__body-subtitle subtitle">Bring your events to life like never before with our VR services.</h3>
-				<div class="about__body-description">
-					<p>VRNas is a leading provider of VR services for education, entertainment, architecture, and events. Our mission is to bring the power of virtual reality to everyone, allowing them to explore new worlds, learn in new ways, and experience events in a whole new light.</p>
-				</div>
-				<ul class="about__body-list">
-					<li class="about__body-item">
-						<img 
-							class="about__body-item-image"
-							src="./images/about/about-group-image.png" 
-							alt=""
-							width="16" height="16" loading="lazy"
-						/>
-						Cutting-Edge Technology
-					</li>
-					<li class="about__body-item">
-						<img 
-							class="about__body-item-image"
-							src="./images/about/about-group-image.png" 
-							alt=""
-							width="16" height="16" loading="lazy"
-						/>
-						Versatile Applications
-					</li>
-					<li class="about__body-item">
-						<img 
-							class="about__body-item-image"
-							src="./images/about/about-group-image.png" 
-							alt=""
-							width="16" height="16" loading="lazy"
-						/>
-						Affordable and Accessible
-					</li>
-				</ul>
-				<button class="about__body-button button button--fill">
-					<span>read more</span>
-				</button>
-			</div>
-		</div>
-	</section> -->
-
-<!-- .about {
-    // position: relative;
-    padding-top: 70px;
-    padding-bottom: 100px;
-    
-    @include mobile {
-        padding-top: 100px;
-    } 
-
-    @include mobile-s {
-        padding-top: 0;
-    }      
-
-    &__inner {
-        position: relative;
-        display: flex;
-        justify-content: end;
-        column-gap: 222px;
-
-        @include tablet {
-            justify-content: center;
-        }
-
-        @include mobile {
-            align-items: start;
-        }
-    }
-
-
-    // CONTENT (Изображения и видео)
-    &__content {
-
-
-        &-bg {
-            position: absolute;
-            width: clamp(360px, calc(400/1440*100*1vw), 400px);
-            height: 496px;
-            background-color: #252532;
-            top: 8%;
-            left: var(--container-padding-x);
-            justify-content: start;
-
-            @include tablet {
-                width: clamp(340px, calc(360/1020*100*1vw), 360px);
-                height: 450px;
-                left: calc(50% + var(--container-padding-x));
-                translate: -50%;
-            }
-
-            @include mobile {
-                width: clamp(360px, 70.21vw, 540px);
-                height: 450px;
-            }
-
-            &-wrapper {
-                &-man {
-                    position: absolute;
-                    z-index: 2;
-                    top: 100%;
-                    left: 4%;
-                    translate: 0 -100%;
-                    min-width: 518px;
-                    height: auto;
-
-                    @include laptop {
-                        min-width: clamp(470px, calc(518/1440*100*1vw), 518px);
-                    }
-
-                    @include tablet {
-                        min-width: clamp(405px, 43vw, 470px);
-                    }
-                }
-
-                &-blur {
-                    position: absolute;
-                    top: 20%;
-                    left: 10%;
-                    translate: -20% 10%;
-                    width: 608px;
-                    height: 364px;
-                    background: url('../../images/about/background-image-blur.png') top / 100% no-repeat;
-                    filter: blur(105px);
-                    z-index: 1; 
-                    
-
-                    @include tablet {
-                        width: clamp(400px, calc(600/1020*100*1vw), 600px);
-                    }
-
-                    @include mobile {
-                        min-width: clamp(400px, 50.05vw, 518px);
-                    }
-                }
-            }
-        }
-
-        &-video-link {
-            width: 196px;
-            height: auto;
-            position: absolute;
-            top: 100%;
-            left: 100%;
-            translate: -40% -80%;
-            background: url('../../images/about/about-video.png');
-            z-index: 2;
-
-            // @media (max-width: 476px) {
-            //     translate: -70% -80%;
-            // }
-        }
-    }
-    
-
-    // BODY (заголовки, текст, список и кнопка)
-    &__body {
-        width: 562px;
-
-        @include laptop {
-            width: clamp(430px, calc(562/1440*100*1vw), 562px);
-        }
-
-        @include tablet {
-            position: relative;
-            left: -6%;
-            translate: 0 130%;
-            max-width: 1200px;
-            width: 100%;
-        }
-
-        @include mobile {
-            left: -6%;
-            translate: 0 130%;
-            max-width: 1200px;
-        }
-
-        &-subtitle {
-            padding-bottom: 12px;
-
-            @media (max-width: 1220px) {
-                font-size: 40px;
-            }
-            
-            @include tablet {
-                font-size: 32px;
-            }
-        }
-
-        &-description {
-            padding-bottom: 24px;
-
-            @media (max-width: 1040px) {
-                padding-bottom: 14px;
-            }
-        }
-
-        &-list {
-            padding-bottom: 32px;
-
-            @media (max-width: 1040px) {
-                padding-bottom: 20px;
-            }
-        }
-
-        &-item {
-            display: flex;
-            align-items: center;
-            color: #fff;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 28px;
-            column-gap: 12px;
-
-            &:not(:last-child) {  
-                padding-bottom: 14px;
-            }
-
-            &-image {
-                width: 16px;
-                height: 16px;
-            }
-        }
-    }
-} -->

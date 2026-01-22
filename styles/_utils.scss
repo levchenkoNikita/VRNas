@@ -18,6 +18,19 @@
     color: #fff;
 }
 
+.hidden-tablet {
+    @include tablet {
+        display: none !important;
+        background-color: red;
+    }
+}
+
+.visible-tablet {
+    @include tablet-above {
+        display: none !important;
+    }
+}
+
 .hidden-mobile {
     @include mobile {
         display: none !important;

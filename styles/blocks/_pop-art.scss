@@ -2,7 +2,11 @@
 
 .pop-art {
     position: relative;
-    left: 46px;
+
+    @include tablet {
+        max-width: 100%;
+        width: 100%;
+    }
 
     &__title {
         font-size: 28px;
@@ -10,13 +14,18 @@
         line-height: 1.5;
         letter-spacing: -0.005em;
         margin-bottom: 32px;
-    }   
+    }
 
     &__slider {
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 44px;
+
+        @include tablet {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 
     &__list {
@@ -24,11 +33,26 @@
         height: 425px;
         display: flex;
         overflow: hidden;
+
+        @include laptop {
+            width: clamp(520px, 49vw, 566px);
+        }
+
+        @include tablet {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 
     &__item {
         width: inherit;
         height: inherit;
+
+        @include tablet {
+            max-width: 100%;
+            width: 100%;
+            flex-shrink: 0;
+        }
     }
 
     &__article {
@@ -36,14 +60,20 @@
         height: inherit;
         display: flex;
         flex-direction: column;
+        align-items: start;
         justify-content: end;
         row-gap: 12px;
         padding: 24px;
         background-position: center;
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         background-image: url('/images/articles/pop-art/1.png');
         transition-duration: var(--transition-duration-slider);
+
+        @include tablet {
+            max-width: 100%;
+            width: 100%;
+        }
 
         &-wrapper {
             display: flex;
@@ -53,7 +83,8 @@
         }
 
         &-subtitle {
-            width: 86px;
+            display: inline-flex;
+            max-width: 136px;
             color: #fff;
             font-size: 14px;
             font-weight: 500;
@@ -70,6 +101,18 @@
             font-weight: 600;
             line-height: 1.5;
             letter-spacing: -0.005em;
+
+            @include laptop {
+                font-size: 30px;
+            }
+
+            @include mobile {
+                font-size: 26px;
+            }
+
+            @include mobile-s {
+                font-size: 24px;
+            }
         }
 
         &-button {
@@ -80,6 +123,18 @@
             height: var(--sizeButton);
             padding: 16px;
             margin-top: 10px;
+        }
+
+        &--2 {
+            background-image: url('/images/articles/pop-art/2.jpg');
+        }
+
+        &--3 {
+            background-image: url('/images/articles/pop-art/3.jpg');
+        }
+
+        &--4 {
+            background-image: url('/images/articles/pop-art/5.webp');
         }
     }
 

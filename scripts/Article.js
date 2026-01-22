@@ -34,8 +34,9 @@ class Article {
         this.observer = new IntersectionObserver((entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    if (entry.target.getAttribute("data-js-slider")) {
-                        this.timer(1);
+                    if (entry.target.hasAttribute("data-js-slider")) {
+                        console.log("Entry target timer")
+                        this.timer(2);
                     }
                     entry.target.classList.add(this.stateClasses.isVisible);
                     this.observer.unobserve(entry.target);
