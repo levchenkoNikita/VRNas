@@ -5,6 +5,7 @@
 
   &__inner {
     display: flex;
+    align-items: center;
     column-gap: 145px;
 
     @include tablet {
@@ -19,7 +20,7 @@
     max-width: 548px;
 
     &-subtitle {
-      margin-bottom: 32px;
+      margin-bottom: 64px;
     }
   }
 

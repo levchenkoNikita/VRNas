@@ -42,16 +42,15 @@
         top: 100%;
         left: calc(0px - var(--selectPadding));
         z-index: 2;
-
-        // height: 0;
-        // padding: 0;
-        // border: none;
-        display: none;
+        display: flex;
+        overflow: hidden;
         flex-direction: column;
         width: 200px;
+        max-height: 0;
         padding: var(--selectPadding);
+        padding-block: 0px;
         background-color: #252532;
-        border: 1px solid;
+        border: 0px solid;
         border-image: var(--gradient-white) 1;
         transition-duration: var(--transition-duration-alt);
         row-gap: var(--selectPadding);
@@ -62,21 +61,11 @@
         }
 
         &.is-active {
-            display: flex;
-
-            // height: auto;
-            // padding: var(--selectPadding);
-            // border: 1px solid;
-            // border-image: var(--gradient-white) 1;
-            // & li {
-            //     display: flex; // Надо разобраться с плавностью появления
-            // }
+            max-height: 500px;
+            border-width: 1px;
+            padding: var(--selectPadding);
         }
     }
-
-    // &__item {
-    //     display: none;
-    // }
 
     &__option {
         @include hover {
