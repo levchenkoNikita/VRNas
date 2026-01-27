@@ -63,3 +63,7 @@ h4, .h4 {
 	font-weight: 400;
 	color: var(--color-white);
 }
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
