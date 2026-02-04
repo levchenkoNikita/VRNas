@@ -86,7 +86,7 @@
                     top: 100%;
                     left: 0;
                     z-index: 1;
-                    translate: -1px calc(-100% + 1px);
+                    translate: -1px calc(-100% + 2px);
                     width: calc(100% + 2px);
                     height: calc(50% + 2px);
                     background-image: linear-gradient(rgba($color: #18181B, $alpha: 0.1), rgba($color: #18181B, $alpha: 0.6), rgba($color: #18181B, $alpha: 1.0) 5% 100%);

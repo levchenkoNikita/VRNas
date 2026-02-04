@@ -1,23 +1,41 @@
 @use '../helper' as *;
 
 .advantages {
-  padding-block: 150px;
+  padding-block: 150px 110px;
+
+  @include tablet {
+    padding-top: 0px;
+  }
 
   &__inner {
     display: flex;
     align-items: center;
-    column-gap: 145px;
+    justify-content: space-around;
+    column-gap: 20px;
 
     @include tablet {
-      flex-direction: column;
+      flex-direction: column-reverse;
       align-items: center;
-      row-gap: 48px;
+      row-gap: 68px;
     }
   }
 
   &__content {
-    width: 100%;
     max-width: 548px;
+    width: 100%;
+
+    opacity: 0;
+    translate: -100% 0;
+    transition-duration: var(--transition-duration-animation);
+
+    &.is-visible {
+      opacity: 1;
+      translate: 0 0;
+    }
+
+    @include laptop {
+      max-width: 460px;
+    }
 
     &-subtitle {
       margin-bottom: 64px;
@@ -25,56 +43,68 @@
   }
 
   &__image {
-    position: relative;
-    width: 100%;
-    max-width: 563px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    z-index: 2;
+    translate: -50% -100%;
+    min-width: 563px;
     height: auto;
-    aspect-ratio: 563/622;
 
-    &-hero {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      z-index: 2;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+    @include laptop {
+      min-width: 500px;
     }
 
-    &--light::after {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      z-index: 1;
-      width: 100%;
-      height: 50%;
-      background: linear-gradient(98.54deg, rgb(28 196 249 / 80%) .72%, rgb(254 105 254 / 80%) 90.69%);
-      border-radius: 88% 12% / 20% 37% 63% 80%;
-      filter: blur(105px);
-      transform: rotate(-30deg);
-      content: '';
+    @include mobile {
+      min-width: 440px;
     }
 
-    &--bg::before {
-      position: absolute;
-      bottom: 0;
-      left: 60px;
-      z-index: -1;
-      width: 399px;
-      height: 497px;
+    &-wrapper {
+      position: relative;
+      top: 60px;
+      width: 400px;
+      height: 500px;
       background-color: #252532;
-      content: '';
+
+      opacity: 0;
+      translate: 0 20%;
+      transition-duration: var(--transition-duration-animation);
+
+      &.is-visible {
+        opacity: 1;
+        translate: 0 0;
+      }
+
+      @include tablet {
+        top: 0;
+      }
+
+      @include mobile {
+        width: 350px;
+        height: 450px;
+      }
     }
 
-    &-video-wrapper {
+    &-video {
       position: absolute;
-      right: 85px;
-      bottom: -37px;
-      z-index: 2;
+      top: 105%;
+      left: 50%;
+      z-index: 3;
+      translate: 0 -100%;
       width: 196px;
-      background: url("../../images/advantages/video.jpg") center/100% no-repeat;
+      height: 128px;
       transition-duration: var(--transition-duration-alt);
-      overflow: hidden;
+      background: url('/images/advantages/video.jpg') center/100% no-repeat;
+
+      &::before {
+        @include abs-center;
+        content: '';
+        z-index: 3;
+        width: 28px;
+        height: 28px;
+        transition-duration: var(--transition-duration);
+        background: url('../../icons/play-button--welcome.svg') center/100% no-repeat;
+      }
 
       @include hover {
         background-size: 110%;
@@ -83,24 +113,15 @@
           scale: 1.2;
         }
       }
-
-
-      &::before {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 2;
-        width: 28px;
-        height: 28px;
-        background: url("../../icons/play-button--welcome.svg") center / 100% no-repeat;
-        content: "";
-        translate: -50% -50%;
-      }
     }
 
-    &-video {
-      width: 196px;
-      height: 127px;
+    &-bg {
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      filter: blur(70px);
+      translate: -50% -50%;
     }
+
   }
 }

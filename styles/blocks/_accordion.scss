@@ -23,6 +23,8 @@
 			align-items: center;
 			justify-content: space-between;
 			column-gap: 30px;
+			user-select: none;
+			cursor: pointer;
 			padding-bottom: 12px;
 			margin-bottom: 12px;
 			border-bottom: 1px solid rgba(255, 255, 255, 0.35);

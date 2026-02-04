@@ -1,6 +1,6 @@
 class HowStarted {
     selectors = {
-        howStarted: "[data-js-how-started]",
+        howStarted: "[data-js-how-started-block]",
         howStartedAnimation: "[data-js-how-started-animation]"
     }
 

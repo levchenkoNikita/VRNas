@@ -1,0 +1,43 @@
+@use '../helper' as *;
+
+.no-link {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    opacity: 0;
+    translate: -50% 10px;
+    padding-block: 2px;
+    padding-inline: 6px;
+    border-radius: 10px;
+    background-image: var(--gradient-blue-pink);
+    transition-duration: var(--transition-duration-alt);
+
+    &.is-active {
+        opacity: 1;
+    }
+
+    & span {
+        position: relative;
+        z-index: 2;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 28px;
+        white-space: nowrap;
+        text-transform: none;
+    }
+
+    &::before {
+        --size: 10px;
+
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 1;
+        translate: -50% -50%;
+        width: var(--size);
+        height: var(--size);
+        rotate: 45deg;
+        background-color: #7B8BED;
+    }
+}

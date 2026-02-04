@@ -1,6 +1,6 @@
 class Article {
     selectors = {
-        article: "[data-js-article]",
+        article: "[data-js-article-block]",
         slider: "[data-js-slider]",
         popArticleList: "[data-js-pop-article-list]",
         popArticleElement: "[data-js-pop-article-element]",
@@ -34,8 +34,7 @@ class Article {
         this.observer = new IntersectionObserver((entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    if (entry.target.hasAttribute("data-js-slider")) {
-                        console.log("Entry target timer")
+                    if (entry.target.classList.contains("pop-art")) {
                         this.timer(2);
                     }
                     entry.target.classList.add(this.stateClasses.isVisible);

@@ -1,6 +1,6 @@
 class Header {
   selectors = {
-    header: "[data-js-header]",
+    header: "[data-js-header-block]",
     menu: "[data-js-header-menu]",
     select: "[data-js-header-select]",
     selectButton: "[data-js-header-select-button]",

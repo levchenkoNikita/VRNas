@@ -6,12 +6,18 @@ import Testimonial from "./Testimonial.js";
 import Pricing from "./Pricing.js";
 import Partners from "./Partners.js";
 import Article from "./Article.js";
+import Footer from "./Footer.js";
+import Advantages from "./Advantages.js";
+import NoLink from "./NoLink.js";
 
 new Header();
 new About();
 new OurService();
+new Advantages();
 new HowStarted();
 new Testimonial();
 new Pricing();
 new Partners();
 new Article();
+new Footer();
+new NoLink();

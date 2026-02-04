@@ -1,7 +1,11 @@
 @use '../helper' as *;
 
 .our-service {
-    padding-block: calc(150px + 23px) 150px;
+    padding-block: calc(150px + 23px) 280px;
+
+    @include tablet {
+        padding-bottom: 222px;
+    }
 
     &__inner {
         position: relative;

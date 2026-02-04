@@ -1,7 +1,7 @@
 class Pricing {
 
     selectors = {
-        pricing: "[data-js-pricing]",
+        pricing: "[data-js-pricing-block]",
         animation: "[data-js-animation]"
     }
 

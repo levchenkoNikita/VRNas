@@ -1,7 +1,7 @@
 class Partners {
 
     selectors = {
-        partners: "[data-js-partners]",
+        partners: "[data-js-partners-block]",
         animation: "[data-js-animation]"
     }
 

@@ -1,7 +1,7 @@
 class OurService {
 
     selectors = {
-        ourService: "[data-js-our-service]",
+        ourService: "[data-js-our-service-block]",
         ourServiceList: "[data-js-our-service-list]",
         ourServiceItem: "[data-js-our-service-item]",
         ourServiceAnimation: "[data-js-our-service-animation]"
@@ -56,18 +56,19 @@ class OurService {
 
     handlerClick() {
         const element = event.target.closest(this.selectors.ourServiceItem);
-
-        if(element == this.lastElement) {
-            element.classList.toggle(this.stateClasses.isActive);
+        if(element && element == this.lastElement) {
+            this.lastElement.classList.toggle(this.stateClasses.isActive);
+            this.lastElement = null;
             return;
         }
 
-        if (this.lastElement && this.lastElement.classList.contains(this.stateClasses.isActive)) {
+        if (this.lastElement) {
             this.lastElement.classList.remove(this.stateClasses.isActive);
+            this.lastElement = null;
         }
 
         if (element) {
-            element.classList.toggle(this.stateClasses.isActive);
+            element.classList.add(this.stateClasses.isActive);
             this.lastElement = element;
         }
     }

@@ -46,7 +46,7 @@
         overflow: hidden;
         flex-direction: column;
         width: 200px;
-        max-height: 0;
+        height: 0;
         padding: var(--selectPadding);
         padding-block: 0px;
         background-color: #252532;
@@ -61,9 +61,17 @@
         }
 
         &.is-active {
-            max-height: 500px;
             border-width: 1px;
-            padding: var(--selectPadding);
+
+            &.select-link__list--1 {
+                height: 189px;
+                padding-block: var(--selectPadding);
+            }
+
+            &.select-link__list--2 {
+                height: 146px;
+                padding-block: var(--selectPadding);
+            }
         }
     }
 

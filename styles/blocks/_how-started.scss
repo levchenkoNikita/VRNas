@@ -1,7 +1,7 @@
 @use '../helper' as *;
 
 .how-started {
-    padding-bottom: 100px;
+    padding-block: 110px 100px;
 
     &__inner {
         display: flex;
@@ -61,7 +61,7 @@
             opacity: 0;
             transition-duration: var(--transition-duration-animation);
             overflow: hidden;
-            translate: 0 100%;
+            translate: 0 50%;
 
             @include tablet {
                 height: clamp(320px, 42vw, 425px);

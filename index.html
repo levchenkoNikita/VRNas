@@ -13,27 +13,27 @@
 
   </div>
   <!------------  HEADER  ------------>
-  <header class="header" data-js-header>
+  <header class="header" data-js-header-block>
     <div class="header__inner container">
       <!-- Логотип -->
       <a href="#" class="header__logo logo">
-        <img src="/images/logo.png" alt="VRNas - логотип сайта" class="header__logo-image" width="101" height="30">
+        <img src="/images/logo.svg" alt="VRNas - логотип сайта" class="header__logo-image" width="101" height="30">
       </a>
       <!-- Меню -->
       <nav class="header__menu" data-js-header-menu>
         <ul class="header__list">
           <li class="header__item">
-            <a href="#" class="header__link header__link--a is-current">
+            <a href="#" class="header__link header__link--a">
               <span class="header__link-text">Home</span>
             </a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link header__link--a">
+            <a href="#about-us" class="header__link header__link--a">
               <span class="header__link-text">About us</span>
             </a>
           </li>
           <li class="header__item">
-            <a href="#" class="header__link header__link--a">
+            <a href="#service" class="header__link header__link--a">
               <span class="header__link-text">Service</span>
             </a>
           </li>
@@ -50,24 +50,24 @@
                 </span>
               </button>
               <!-- Ниже указан список ссылок для выбора -->
-              <ul class="select-link__list" data-js-header-select-list>
+              <ul class="select-link__list select-link__list--1" data-js-header-select-list>
                 <li class="select-link__item">
-                  <a href="#" class="select-link__option">
+                  <a href="#pricing-plan" class="select-link__option">
                     <span class="select-link__option-text">Pricing Plan</span>
                   </a>
                 </li>
                 <li class="select-link__item">
-                  <a href="#" class="select-link__option">
+                  <a href="#advantages" class="select-link__option">
                     <span class="select-link__option-text">FAQ</span>
                   </a>
                 </li>
                 <li class="select-link__item">
-                  <a href="#" class="select-link__option">
+                  <a href="#" class="select-link__option" data-js-no-link>
                     <span class="select-link__option-text">Tems & Conditions</span>
                   </a>
                 </li>
                 <li class="select-link__item">
-                  <a href="#" class="select-link__option">
+                  <a href="#" class="select-link__option" data-js-no-link>
                     <span class="select-link__option-text">Privacy Policy</span>
                   </a>
                 </li>
@@ -86,19 +86,19 @@
                 </span>
               </button>
               <!-- Ниже указан список ссылок для выбора -->
-              <ul class="select-link__list" data-js-header-select-list>
+              <ul class="select-link__list select-link__list--2" data-js-header-select-list>
                 <li class="select-link__item">
-                  <a href="#" class="select-link__option">
+                  <a href="#articles" class="select-link__option">
                     <span class="select-link__option-text">Resent articles</span>
                   </a>
                 </li>
                 <li class="select-link__item">
-                  <a href="#" class="select-link__option">
+                  <a href="#" class="select-link__option" data-js-no-link>
                     <span class="select-link__option-text">Our Team</span>
                   </a>
                 </li>
                 <li class="select-link__item">
-                  <a href="#" class="select-link__option">
+                  <a href="#" class="select-link__option" data-js-no-link>
                     <span class="select-link__option-text">Detail Service</span>
                   </a>
                 </li>
@@ -112,10 +112,10 @@
       </nav>
       <!-- КнопкИ -->
       <div class="header__button-wrapper">
-        <button class="header__button button button--transparent button--alt hidden-mobile-s">
+        <button class="header__button button button--transparent button--alt hidden-mobile-s" data-js-no-link>
           <span class="header__button-text">Contact Us</span>
         </button>
-        <button class="header__burger-button burger-button visible-mobile" title="menu" data-js-header-burger-button>
+        <button class="header__burger-button burger-button visible-mobile" title="menu" data-js-header-burger-button data-js-no-link>
           <span class="burger-button__text visually-hidden">Menu</span>
           <span class="burger-button__line"></span>
         </button>
@@ -128,7 +128,7 @@
     <div class="background-image background-image--grid"></div>
 
     <!------------  WELCOME  ------------>
-    <section class="page__welcome welcome">
+    <section class="page__welcome welcome" data-js-welcome-block>
       <div class="welcome__inner container">
         <div class="welcome__content">
           <div class="welcome__content-info welcome__info">
@@ -140,7 +140,7 @@
                 </p>
               </div>
             </div>
-            <button class="welcome__info-button button button--fill">
+            <button class="welcome__info-button button button--fill" data-js-no-link>
               <span>Discover More</span>
             </button>
           </div>
@@ -209,11 +209,11 @@
     </section>
 
     <!------------  ABOUT  ------------>
-    <section class="page__about about">
+    <section class="page__about about" id="about-us" data-js-about-block>
       <div class="about__inner container">
         <div class="about__image about__image--bg about__image--light" data-js-about-animation-left>
           <img class="about__image-hero" src="./images/hero--about.png" alt="" loading="lazy" width="518" height="622">
-          <a class="about__image-video-wrapper" href="https://www.youtube.com/watch?v=r0iuRANqFIw"
+          <a class="about__image-video-wrapper" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
             aria-label="Watch our video" target="_blank" rel="noopener noreferrer">
             <video class="about__image-video" src="" width="186" height="128"></video>
           </a>
@@ -234,7 +234,7 @@
             <li class="about__content-item">Versatile Applications</li>
             <li class="about__content-item">Affordable and Accessible</li>
           </ul>
-          <button class="about__content-button button button--fill" data-js-about-animation>
+          <button class="about__content-button button button--fill" data-js-about-animation data-js-no-link>
             <span>read more</span>
           </button>
         </div>
@@ -242,7 +242,7 @@
     </section>
 
     <!------------  OUR-SERVICE  ------------>
-    <section class="page__our-service our-service" data-js-our-service>
+    <section class="page__our-service our-service" id="service" data-js-our-service-block>
       <div class="our-service__inner container">
         <div class="our-service__header">
           <div class="our-service__header-title-wrapper">
@@ -384,9 +384,9 @@
     </section>
 
     <!------------  ADVANTAGES  ------------>
-    <section class="page__advantages advantages">
+    <section class="page__advantages advantages" id="advantages" data-js-advantages-block>
       <div class="advantages__inner container">
-        <div class="advantages__content">
+        <div class="advantages__content" data-js-animation>
           <h2 class="advantages__content-title title">WHY CHOOSE US
           </h2>
           <p class="advantages__content-subtitle h2">
@@ -473,19 +473,21 @@
             </div>
           </div>
         </div>
-        <div class="advantages__image advantages__image--bg advantages__image--light">
-          <img class="advantages__image-hero" src="./images/advantages/hero.png" alt="" loading="lazy" width="563"
+        <div class="advantages__image-wrapper" data-js-animation>
+          <img class="advantages__image" src="./images/advantages/hero.png" alt="" loading="lazy" width="563"
             height="622">
-          <a class="advantages__image-video-wrapper" href="https://www.youtube.com/watch?v=QHp3ps0rkmU"
+          <a class="advantages__image-video" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
             aria-label="Watch our video" target="_blank" rel="noopener noreferrer">
-            <video class="advantages__image-video" src="" width="196" height="128"></video>
           </a>
+          <div class="advantages__image-bg background-image background-image--back-hero">
+
+          </div>
         </div>
       </div>
     </section>
 
     <!------------  HOW-STARTED  ------------>
-    <section class="page__how-started how-started" data-js-how-started>
+    <section class="page__how-started how-started" data-js-how-started-block>
       <div class="how-started__inner container">
         <div class="how-started__header">
           <h2 class="how-started__title title" data-js-how-started-animation>HOW TO GET STARTED
@@ -515,143 +517,249 @@
             </div>
           </div>
         </a>
-        <button class="how-started__button button button--fill" data-js-how-started-animation>
+        <button class="how-started__button button button--fill" data-js-how-started-animation data-js-no-link>
           <span>GET STARTED</span>
         </button>
       </div>
     </section>
 
     <!------------  TESTIMONIAL  ------------>
-    <section class="page__testimonial testimonial container">
-      <div class="testimonial__header">
-        <h2 class="testimonial__title title" data-js-about-animation>TESTIMONIAL
-        </h2>
-        <p class="testimonial__subtitle h2" data-js-about-animation>
-          What Our Clients Are Saying
-        </p>
-      </div>
+    <section class="page__testimonial testimonial" id="testimonial" data-js-testimonial-block>
+      <div class="testimonial__inner">
+        <div class="testimonial__header">
+          <h2 class="testimonial__title title" data-js-animation>
+            TESTIMONIAL
+          </h2>
+          <h3 class="testimonial__subtitle h2" data-js-animation>
+            What Our Clients Are Saying
+          </h3>
+        </div>
 
-      <div class="testimonial__content" data-js-testimonial-content>
-        <picture>
-          <source srcset="./images/testimonial/background.webp" type="image/webp" />
-          <img class="testimonial__background" src="./images/testimonial/background.png" alt="" loading="lazy"
-            width="1247" height="1247" />
-        </picture>
-        <ul class="testimonial__client-list">
-          <li class="testimonial__client-item" data-js-testimonial-client-position="1">
-            <button class="testimonial__client-button" type="button" title="empty">
-              <picture>
-                <source srcset="./images/testimonial/client-1.webp" type="image/webp" />
-                <img class="testimonial__client-image" src="./images/testimonial/client-1.png" alt="" width="50"
-                  height="50" loading="lazy" />
-              </picture>
-            </button>
-            <div class="testimonial__client-popup" data-js-testimonial-popup>
-              <p class="testimonial__client-popup-text">
-                The team was professional, responsive, and a pleasure to work with. We highly recommend VRNas for any VR
-                needs.
-              </p>
-              <div class="testimonial__client-popup-author">
-                <span>Robert Fox</span> - CEO Anono
+        <div class="testimonial__content" data-js-animation>
+          <div class="testimonial__round testimonial__round--1">
+            <div class="testimonial__round testimonial__round--2">
+              <div class="testimonial__round testimonial__round--3">
+                <div class="testimonial__round testimonial__round--4">
+                  <div class="testimonial__round testimonial__round--5">
+                    <div class="testimonial__round testimonial__round--6">
+                      <img src="/images/testimonial/person.png" alt="a man" class="testimonial__image" loading="lazy">
+                      <div class="testimonial__blur background-image background-image--back-hero">
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </li>
-          <li class="testimonial__client-item" data-js-testimonial-client-position="2">
-            <button class="testimonial__client-button" type="button" title="empty">
-              <picture>
-                <source srcset="./images/testimonial/client-2.webp" type="image/webp" />
-                <img class="testimonial__client-image" src="./images/testimonial/client-2.png" alt="" width="50"
-                  height="50" loading="lazy" />
-              </picture>
-            </button>
-            <div class="testimonial__client-popup" data-js-testimonial-popup>
-              <p class="testimonial__client-popup-text">
-                The team was professional, responsive, and a pleasure to work with. We highly recommend VRNas for any VR
-                needs.
-              </p>
-              <div class="testimonial__client-popup-author">
-                <span>Robert Fox</span> - CEO Anono
-              </div>
-            </div>
-          </li>
-          <li class="testimonial__client-item" data-js-testimonial-client-position="3">
-            <button class="testimonial__client-button" type="button" title="empty">
-              <picture>
-                <source srcset="./images/testimonial/client-3.webp" type="image/webp" />
-                <img class="testimonial__client-image" src="./images/testimonial/client-3.png" alt="" width="50"
-                  height="50" loading="lazy" />
-              </picture>
-            </button>
-            <div class="testimonial__client-popup" data-js-testimonial-popup>
-              <p class="testimonial__client-popup-text">
-                The team was professional, responsive, and a pleasure to work with. We highly recommend VRNas for any VR
-                needs.
-              </p>
-              <div class="testimonial__client-popup-author">
-                <span>Robert Fox</span> - CEO Anono
-              </div>
-            </div>
-          </li>
-          <li class="testimonial__client-item" data-js-testimonial-client-position="4">
-            <button class="testimonial__client-button" type="button" title="empty">
-              <picture>
-                <source srcset="./images/testimonial/client-4.webp" type="image/webp" />
-                <img class="testimonial__client-image" src="./images/testimonial/client-4.png" alt="" width="50"
-                  height="50" loading="lazy" />
-              </picture>
-            </button>
-            <div class="testimonial__client-popup" data-js-testimonial-popup>
-              <p class="testimonial__client-popup-text">
-                The team was professional, responsive, and a pleasure to work with. We highly recommend VRNas for any VR
-                needs.
-              </p>
-              <div class="testimonial__client-popup-author">
-                <span>Robert Fox</span> - CEO Anono
-              </div>
-            </div>
-          </li>
-          <li class="testimonial__client-item" data-js-testimonial-client-position="5">
-            <button class="testimonial__client-button" type="button" title="empty">
-              <picture>
-                <source srcset="./images/testimonial/client-5.webp" type="image/webp" />
-                <img class="testimonial__client-image" src="./images/testimonial/client-5.png" alt="" width="50"
-                  height="50" loading="lazy" />
-              </picture>
-            </button>
-            <div class="testimonial__client-popup">
-              <p class="testimonial__client-popup-text">
-                The team was professional, responsive, and a pleasure to work with. We highly recommend VRNas for any VR
-                needs.
-              </p>
-              <div class="testimonial__client-popup-author">
-                <span>Robert Fox</span> - CEO Anono
-              </div>
-            </div>
-          </li>
-          <li class="testimonial__client-item" data-js-testimonial-client-position="6">
-            <button class="testimonial__client-button" type="button" title="empty">
-              <picture>
-                <source srcset="./images/testimonial/client-6.webp" type="image/webp" />
-                <img class="testimonial__client-image" src="./images/testimonial/client-6.png" alt="" width="50"
-                  height="50" loading="lazy" />
-              </picture>
-            </button>
-            <div class="testimonial__client-popup" data-js-testimonial-popup>
-              <p class="testimonial__client-popup-text">
-                The team was professional, responsive, and a pleasure to work with. We highly recommend VRNas for any VR
-                needs.
-              </p>
-              <div class="testimonial__client-popup-author">
-                <span>Robert Fox</span> - CEO Anono
-              </div>
-            </div>
-          </li>
-        </ul>
+            <ul class="testimonial__person-list" data-js-list>
+              <li class="testimonial__person-item">
+                <article class="testimonial__person-wrapper testimonial__person-wrapper--1" data-js-animation
+                  data-js-article>
+                  <div class="testimonial__person-image-wrapper" data-js-person-button>
+                    <div class="testimonial__person-image-back">
+                      <img src="/images/testimonial/client-1.png" alt="a man" class="testimonial__person-image"
+                        width="50" height="50" loading="lazy">
+                      <div class="testimonial__person-image-blur background-image background-image--back-hero">
+
+                      </div>
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--white">
+
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--blue-pink">
+
+                    </div>
+                  </div>
+                  <div class="testimonial__person-info">
+                    <div class="testimonial__person-info-description">
+                      <p>
+                        The team was professional, responsive, and a pleasure to work with. We highly recommend VRNas
+                        for
+                        any VR needs.
+                      </p>
+                    </div>
+                    <h4 class="testimonial__person-info-worker">
+                      Robert Fox - CEO Anono
+                    </h4>
+                  </div>
+                </article>
+              </li>
+              <li class="testimonial__person-item" data-js-animation>
+                <article class="testimonial__person-wrapper testimonial__person-wrapper--2" data-js-animation
+                  data-js-article>
+                  <div class="testimonial__person-image-wrapper" data-js-person-button>
+                    <div class="testimonial__person-image-back">
+                      <img src="/images/testimonial/client-2.png" alt="a man" class="testimonial__person-image"
+                        width="50" height="50" loading="lazy">
+                      <div class="testimonial__person-image-blur background-image background-image--back-hero">
+
+                      </div>
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--white">
+
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--blue-pink">
+
+                    </div>
+                  </div>
+                  <div class="testimonial__person-info">
+                    <div class="testimonial__person-info-description">
+                      <p>
+                        Voluptates obcaecati ad magnam non dicta! Inventore maxime deserunt ratione?
+                      </p>
+                    </div>
+                    <h4 class="testimonial__person-info-worker">
+                      Gerbert Dullsun - Producer
+                    </h4>
+                  </div>
+                </article>
+              </li>
+              <li class="testimonial__person-item" data-js-animation>
+                <article class="testimonial__person-wrapper testimonial__person-wrapper--3" data-js-animation
+                  data-js-article>
+                  <div class="testimonial__person-image-wrapper" data-js-person-button>
+                    <div class="testimonial__person-image-back">
+                      <img src="/images/testimonial/client-3.png" alt="a man" class="testimonial__person-image"
+                        width="50" height="50" loading="lazy">
+                      <div class="testimonial__person-image-blur background-image background-image--back-hero">
+
+                      </div>
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--white">
+
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--blue-pink">
+
+                    </div>
+                  </div>
+                  <div class="testimonial__person-info">
+                    <div class="testimonial__person-info-description">
+                      <p>
+                        The team was professional, responsive, and a pleasure to work with. We highly recommend VRNas
+                        for
+                        any VR needs.
+                      </p>
+                    </div>
+                    <h4 class="testimonial__person-info-worker">
+                      Keyanu Rocks - Main charter
+                    </h4>
+                  </div>
+                </article>
+              </li>
+              <li class="testimonial__person-item" data-js-animation>
+                <article class="testimonial__person-wrapper testimonial__person-wrapper--4" data-js-animation
+                  data-js-article>
+                  <div class="testimonial__person-image-wrapper" data-js-person-button>
+                    <div class="testimonial__person-image-back">
+                      <img src="/images/testimonial/client-4.png" alt="a man" class="testimonial__person-image"
+                        width="50" height="50" loading="lazy">
+                      <div class="testimonial__person-image-blur background-image background-image--back-hero">
+
+                      </div>
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--white">
+
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--blue-pink">
+
+                    </div>
+                  </div>
+                  <div class="testimonial__person-info">
+                    <div class="testimonial__person-info-description">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos sequi voluptatibus
+                        inventore cupiditate, soluta modi earum autem mollitia eaque nihil! Facere facilis praesentium
+                        error porro?
+                      </p>
+                    </div>
+                    <h4 class="testimonial__person-info-worker">
+                      Ron Potter - Adminstrator
+                    </h4>
+                  </div>
+                </article>
+              </li>
+              <li class="testimonial__person-item" data-js-animation>
+                <article class="testimonial__person-wrapper testimonial__person-wrapper--5" data-js-animation
+                  data-js-article>
+                  <div class="testimonial__person-image-wrapper" data-js-person-button>
+                    <div class="testimonial__person-image-back">
+                      <img src="/images/testimonial/client-5.png" alt="a man" class="testimonial__person-image"
+                        width="50" height="50" loading="lazy">
+                      <div class="testimonial__person-image-blur background-image background-image--back-hero">
+
+                      </div>
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--white">
+
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--blue-pink">
+
+                    </div>
+                  </div>
+                  <div class="testimonial__person-info">
+                    <div class="testimonial__person-info-description">
+                      <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, eveniet reiciendis sint fugiat
+                        iste ipsam?
+                      </p>
+                    </div>
+                    <h4 class="testimonial__person-info-worker">
+                      Albert Socks - EVO Anono
+                    </h4>
+                  </div>
+                </article>
+              </li>
+              <li class="testimonial__person-item" data-js-animation>
+                <article class="testimonial__person-wrapper testimonial__person-wrapper--6" data-js-animation
+                  data-js-article>
+                  <div class="testimonial__person-image-wrapper" data-js-person-button>
+                    <div class="testimonial__person-image-back">
+                      <img src="/images/testimonial/client-6.png" alt="a man" class="testimonial__person-image"
+                        width="50" height="50" loading="lazy">
+                      <div class="testimonial__person-image-blur background-image background-image--back-hero">
+
+                      </div>
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--white">
+
+                    </div>
+                    <div
+                      class="testimonial__person-image-wrapper-gradient testimonial__person-image-wrapper-gradient--blue-pink">
+
+                    </div>
+                  </div>
+                  <div class="testimonial__person-info">
+                    <div class="testimonial__person-info-description">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, repudiandae eligendi. Earum
+                        eligendi minima optio sint architecto esse? Explicabo, error.
+                      </p>
+                    </div>
+                    <h4 class="testimonial__person-info-worker">
+                      Samuel Rodrigez - Subminist
+                    </h4>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
     <!------------  PRICING  ------------>
-    <section class="page__pricing pricing" data-js-pricing>
+    <section class="page__pricing pricing" id="pricing-plan" data-js-pricing-block>
       <div class="pricing__inner container">
         <div class="pricing__header">
           <h2 class="pricing__header-title pricing__header-title--h2 title" data-js-animation>
@@ -772,9 +880,9 @@
                 $99
               </p>
             </div>
-            <div class="pricing__abs-block-button button button--fill">
+            <button class="pricing__abs-block-button button button--fill" data-js-no-link>
               <span>get started</span>
-            </div>
+            </button>
             <div class="pricing__abs-block-ps">
               <p>
                 30 Days Moneyback Guarantee
@@ -786,7 +894,7 @@
     </section>
 
     <!------------  PARTNERS  ------------>
-    <section class="page__partners partners" data-js-partners>
+    <section class="page__partners partners" data-js-partners-block>
       <div class="partners__inner container">
         <div class="partners__header">
           <h2 class="partners__header-title partners__header-title--h2 title" data-js-animation>
@@ -815,37 +923,37 @@
               <ul class="partners__body-list companies">
                 <li class="companies__item" data-js-animation>
                   <a href="#" class="companies__link" title="company-1">
-                    <img src="/images/partners/company-1.png" alt="company-1" class="companies__img companies__img--1">
+                    <img src="/images/partners/company-1.svg" alt="company-1" class="companies__img companies__img--1">
                   </a>
                 </li>
                 <li class="companies__item" data-js-animation>
                   <a href="#" class="companies__link" title="company-1">
-                    <img src="/images/partners/company-2.png" alt="company-1" class="companies__img companies__img--2">
+                    <img src="/images/partners/company-2.svg" alt="company-1" class="companies__img companies__img--2">
                   </a>
                 </li>
                 <li class="companies__item" data-js-animation>
                   <a href="#" class="companies__link" title="company-1">
-                    <img src="/images/partners/company-3.png" alt="company-1" class="companies__img companies__img--3">
+                    <img src="/images/partners/company-3.svg" alt="company-1" class="companies__img companies__img--3">
                   </a>
                 </li>
                 <li class="companies__item" data-js-animation>
                   <a href="#" class="companies__link" title="company-1">
-                    <img src="/images/partners/company-4.png" alt="company-1" class="companies__img companies__img--4">
+                    <img src="/images/partners/company-4.svg" alt="company-1" class="companies__img companies__img--4">
                   </a>
                 </li>
                 <li class="companies__item" data-js-animation>
                   <a href="#" class="companies__link" title="company-1">
-                    <img src="/images/partners/company-5.png" alt="company-1" class="companies__img companies__img--5">
+                    <img src="/images/partners/company-5.svg" alt="company-1" class="companies__img companies__img--5">
                   </a>
                 </li>
                 <li class="companies__item" data-js-animation>
                   <a href="#" class="companies__link" title="company-1">
-                    <img src="/images/partners/company-6.png" alt="company-1" class="companies__img companies__img--6">
+                    <img src="/images/partners/company-6.svg" alt="company-1" class="companies__img companies__img--6">
                   </a>
                 </li>
                 <li class="companies__item" data-js-animation>
                   <a href="#" class="companies__link" title="company-1">
-                    <img src="/images/partners/company-7.png" alt="company-1" class="companies__img companies__img--7">
+                    <img src="/images/partners/company-7.svg" alt="company-1" class="companies__img companies__img--7">
                   </a>
                 </li>
               </ul>
@@ -857,7 +965,7 @@
     </section>
 
     <!------------  ARTICLES  ------------>
-    <section class="page__articles articles" data-js-article>
+    <section class="page__articles articles" id="articles" data-js-article-block>
       <div class="articles__inner container">
         <div class="articles__header">
           <h2 class="articles__header-title articles__header-title--h2 title" data-js-animation>
@@ -867,15 +975,15 @@
             <h3 class="articles__header-title articles__header-title--h3 h2" data-js-animation>
               Stay Up-to-Date with Our VR Insights
             </h3>
-            <button class="articles__header-button button button--transparent hidden-mobile">
+            <button class="articles__header-button button button--transparent hidden-mobile" data-js-no-link>
               <span>
                 see all
               </span>
             </button>
           </div>
         </div>
-        <div class="articles__body" data-js-animation data-js-slider>
-          <div class="articles__popular-wrapper pop-art">
+        <div class="articles__body" data-js-slider>
+          <div class="articles__popular-wrapper pop-art" data-js-animation>
             <h4 class="pop-art__title">
               Popular Article
             </h4>
@@ -1012,7 +1120,7 @@
             </div>
           </div>
           <div class="articles__recent-wrapper rec-art">
-            <div class="rec-art__wrapper">
+            <div class="rec-art__wrapper" data-js-animation>
               <h4 class="rec-art__title">
                 Recent Article
               </h4>
@@ -1203,7 +1311,7 @@
 
             </div>
           </div>
-          <button class="articles__button articles__header-button button button--transparent visible-mobile">
+          <button class="articles__button articles__header-button button button--transparent visible-mobile" data-js-no-link>
             <span>
               see all
             </span>
@@ -1243,16 +1351,16 @@
 
   </main>
 
-  <footer class="footer">
-    <div class="footer__inner container">
+  <footer class="footer" id="footer" data-js-footer-block>
+    <div class="footer__inner container" data-js-animation>
       <div class="footer__main">
         <div class="footer__contacts">
           <a href="#" class="footer__logo logo">
-            <img src="/images/logo.png" alt="VRNas - логотип сайта" class="header__logo-image" width="101" height="30">
+            <img src="/images/logo.svg" alt="VRNas - логотип сайта" class="header__logo-image" width="101" height="30">
           </a>
           <ul class="footer__contacts-list">
             <li class="footer__contacts-item">
-              <a href="#" class="footer__contacts-link">
+              <a href="" class="footer__contacts-link" data-js-no-link>
                 <div class="footer__contacts-link-overlay">
                   <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -1263,7 +1371,7 @@
               </a>
             </li>
             <li class="footer__contacts-item">
-              <a href="#" class="footer__contacts-link">
+              <a href="" class="footer__contacts-link" data-js-no-link>
                 <div class="footer__contacts-link-overlay">
                   <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -1274,7 +1382,7 @@
               </a>
             </li>
             <li class="footer__contacts-item">
-              <a href="#" class="footer__contacts-link">
+              <a href="" class="footer__contacts-link" data-js-no-link>
                 <div class="footer__contacts-link-overlay">
                   <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -1285,7 +1393,7 @@
               </a>
             </li>
             <li class="footer__contacts-item">
-              <a href="#" class="footer__contacts-link">
+              <a href="" class="footer__contacts-link" data-js-no-link>
                 <div class="footer__contacts-link-overlay">
                   <svg width="19" height="15" viewBox="0 0 19 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -1413,7 +1521,7 @@
           </div>
         </nav>
       </div>
-      <div class="footer__copyright">
+      <div class="footer__copyright" id="privacy-policy">
         © Copyright 2023, All Rights Reserved
       </div>
     </div>

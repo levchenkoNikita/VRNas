@@ -1,13 +1,10 @@
 @use "../helper" as *;
 
 .articles {
-    // position: relative;
-    // z-index: 10;
+    padding-top: 100px;
+    margin-top: -100px;
     padding-bottom: 64px;
-
-    &__inner {
-        // position: relative;
-    }
+    background-color: #18181B;
 
     &__header {
         padding-bottom: 72px;
@@ -57,14 +54,14 @@
 
     &__footer {
         margin-top: 100px;
-        // opacity: 0;
-        // translate: 0 100%;
-        // transition-duration: var(--transition-duration-animation);
+        opacity: 0;
+        translate: 0 100%;
+        transition-duration: var(--transition-duration-animation);
 
-        // &.is-visible {
-        //     opacity: 1;
-        //     translate: 0 0;
-        // }
+        &.is-visible {
+            opacity: 1;
+            translate: 0 0;
+        }
     }
 
     &__form {
